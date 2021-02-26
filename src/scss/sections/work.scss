@@ -1,9 +1,17 @@
 .project {
-    margin: 5em 0;
+    margin: 9em 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+    &:nth-child(odd) {
+        flex-direction: row-reverse;
+        .project__left {
+            padding-right: 0;
+            padding-left: 2em;
+        }
+    }
 }
 
 .project__headline {
