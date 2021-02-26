@@ -9,13 +9,46 @@
   <body>
     <nav class="navigation">
       <ul>
-        <li class="navigation__item"><a href="#me">About me</a></li>
-        <li class="navigation__item"><a href="#work">My Work</a></li>
-        <li class="navigation__item"><a href="#contact">Contact</a></li>
+        <li class="navigation__item"><a data-scroll href="#me">About me</a></li>
+        <li class="navigation__item"><a data-scroll href="#work">My Work</a></li>
+        <li class="navigation__item"><a data-scroll href="#contact">Contact</a></li>
       </ul>
     </nav>
     <header class="section section--fullscreen header">
-      <img class="header__image" src="../images/content/denise.png">
+      <div class="wrapper">
+        <div class="header__image">
+          <img class="header__image--1" src="../images/content/denise.png">
+          <img class="header__image--2" src="../images/content/denise-wink.png">
+        </div>
+        <h1 class="header__headline">
+          Hi I am Denise!
+        </h1>
+        <span class="header__line line line--short"></span>
+        <h2 class="header__subline">
+          a web development student.
+        </h2>
+      </div>
     </header>
+    <span class="line line--long"></span>
+    <section class="section section--fullscreen about-me" id="me">
+      <div class="wrapper">
+        <h3 class="about-me__headline">About me</h3>
+        <img class="about-me__img" src="../images/content/me.jpg">
+        <p class="about-me__text">I’m a 24 year old web engineering student from Salzburg, Austria. I am currently doing my master’s degree in MultiMediaTechnology at the University of Applied Sciences in Salzburg. Ever since my childhood I was interested in art and technology. That’s why I studied graphic and communication design at school to explore my artsy side and now I am more focused on the technical side of things. In my free time I like to do sports, play video games and …
+          <br> <br>
+          I am passionate about new technologies so I enjoy playing around with different programming languages, frameworks and I am not afraid to face new challenges.  
+          If you have any questions or just want to say hello feel free to contact me! I’ll be happy to hear from you.</p>
+      </div>
+    </section>
+    <span class="line line--long"></span>
+    <section class="section section--fullscreen" id="work">
+      <div class="wrapper">
+        <h3 class="work__headline">Work</h3>
+      </div>
+    </section>
+    <section class="section section--fullscreen" id="contact">
+      <div class="wrapper">
+      </div>
+    </section>
   </body>
 </html>
