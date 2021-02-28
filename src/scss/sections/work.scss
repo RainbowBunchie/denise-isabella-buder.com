@@ -73,7 +73,7 @@
     .wrapper {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
     .work__headline {
         margin-bottom: 2em;
@@ -86,4 +86,5 @@
     }
     padding: .5em;
     width: 50%;
+    height: auto;
 } 
