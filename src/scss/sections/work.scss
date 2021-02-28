@@ -68,3 +68,22 @@
         transform:  translateX(0);
       }
 }
+
+.work--design {
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .work__headline {
+        margin-bottom: 2em;
+    }
+}
+
+.work__img {
+    @media screen and (min-width: 700px) {
+        width: 33.333%;
+    }
+    padding: .5em;
+    width: 50%;
+} 
