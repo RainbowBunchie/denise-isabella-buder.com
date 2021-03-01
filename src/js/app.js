@@ -1,11 +1,7 @@
-import Chocolat from 'chocolat';
-
 import '../scss/app.scss';
 
 import './SmoothScroll.js';
 
-Chocolat(document.querySelectorAll('.chocolat'), {
-    loop: true,
-});
+import './Lightbox.js';
 
-Chocolat(document.querySelectorAll('.chocolat2'), {});
+import './MobileNav.js';

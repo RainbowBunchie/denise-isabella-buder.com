@@ -12,8 +12,8 @@
 }
 
 .footer__link {
-    margin: 2em;
     color: #000;
+    margin: 2em .5em;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
@@ -22,6 +22,10 @@
     overflow: hidden;
     padding-bottom: 5px;
     float: left;
+
+    @media screen and (min-width: 600px) {
+        margin: 2em;
+    }
 
     &::after {
         content: '';
