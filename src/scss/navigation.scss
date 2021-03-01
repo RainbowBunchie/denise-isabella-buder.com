@@ -12,7 +12,22 @@
     }
 }
 
+.navigation--mobile {
+    display: none;
+    background-color: $light-gray;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    overflow: hidden;
+}
+
+.navigation--open {
+    display: flex;
+}
+
 .navigation--burger {
+    z-index: 5;
     display: block;
     @media screen and (min-width: 1350px) {
         display: none;
