@@ -18,17 +18,23 @@
 }
 
 .navigation--mobile {
-    display: none;
+    transform: translateX(-100vw);
     background-color: $light-gray;
     position: fixed;
+    opacity: 0;
     width: 100vw;
     height: 100vh;
     z-index: 4;
     overflow: hidden;
+    transition: transform .4s ease-in-out, opacity .2s ease-in-out;
 }
 
 .navigation--open {
+    transform: translateX(0);
     display: flex;
+    z-index: 2;
+    opacity: 1;
+    transition: transform .4s ease-in-out,  opacity .2s ease-in-out;
 }
 
 .navigation--burger {
