@@ -11,6 +11,10 @@
     }
 }
 
+.contact__headline {
+    margin-bottom: 2em;
+}
+
 .contact__img {
     width: 100%;
     @media screen and (min-width: 600px) {
@@ -28,6 +32,10 @@
     }
 }
 
+.contact__text {
+    margin-bottom: .8em;
+}
+
 .contact__link {
     display: flex;
     width: 100%;
@@ -41,9 +49,14 @@
 }
 
 .contact__icon {
-    height: 1.8em;
+    height: 1.7em;
     width: auto;
-    margin: .5em 0;
+    margin: .4em 0;
     margin-right: .5em;
+}
+
+.icon--mail {
+    padding: .23em 0;
+    margin-right: .6em;
 }
 
