@@ -22,10 +22,14 @@
 .header__headline {
     font-weight: 600;
     font-size: 2.5em;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
 }
 
 .header__line {
  margin: 1em 0;
+ opacity: 0;
+ animation: fadeIn 1.5s .3s forwards;
 }
 
 .header__subline {
@@ -33,6 +37,8 @@
     font-weight: 600;
     font-size: 1.2em;
     text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s .6s forwards;
 }
 
 .header__image {
@@ -66,12 +72,10 @@
     width: 10px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    animation-name: bounce-mobile;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    opacity: 0;
+    animation: fadeIn2 1.5s 1s forwards, bounce-mobile 2s infinite ease-in-out;
     @media screen and (min-width: 400px) {
-        animation-name: bounce;
+        animation: fadeIn2 1.5s 1s forwards, bounce 2s infinite ease-in-out;
         bottom: 50px;
     }
 }
@@ -86,4 +90,24 @@
     0%   {bottom: 20px;}
     50%  {bottom: 30px;}
     100% {bottom: 20px}
+  }
+
+  @keyframes fadeIn {
+    from {
+        transform: translateY(6px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+    @keyframes fadeIn2 {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
   }

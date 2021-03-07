@@ -1,3 +1,7 @@
+.parallax {
+    transform: translateY(var(--ty)); 
+}
+
 .section--fullscreen {
     min-height: 100vh;
     width: 100vw;

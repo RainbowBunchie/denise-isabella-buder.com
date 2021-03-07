@@ -80,7 +80,9 @@
   },
   "target": "web",
   "dependencies": {
+    "basicscroll": "^3.0.4",
     "chocolat": "^1.0.4",
-    "smooth-scroll": "^16.1.3"
+    "smooth-scroll": "^16.1.3",
+    "uninstall": "^0.0.0"
   }
 }
