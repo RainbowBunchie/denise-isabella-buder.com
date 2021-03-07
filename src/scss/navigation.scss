@@ -80,11 +80,20 @@
     display: none;
     @media screen and (min-width: 1100px) {
         display: block;
+        opacity: 0;
+        transition: opacity .5s, transform 1s;
+        transform: translateY(10px);
     }
     position: fixed;
     right: calc(15px + 2.5em);
     bottom: 0;
-} 
+}
+
+.navigation--visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s, transform 1s;
+}
 
 .navigation__arrow {
     position: absolute;

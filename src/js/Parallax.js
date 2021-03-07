@@ -1,32 +1,14 @@
-// import * as basicScroll from 'basicscroll';
+import ScrollMagic from 'scrollmagic';
 
-// const parralaxElements = document.querySelectorAll('.parallax');
+var controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+        triggerHook: 'onEnter',
+    },
+});
 
-// console.log(parralaxElements)
+const revealElements = document.getElementsByClassName('section--work')[0];
+const bottomNav = document.getElementsByClassName('navigation--bottom')[0];
 
-// for (const parralaxElement of parralaxElements) {
-//     const from = parralaxElement.getAttribute('data-from') || '0px';
-//     const to = parralaxElement.getAttribute('data-to') || '100px';
-//     const timing = parralaxElement.getAttribute('data-timing') || 'linear';
-//     const instance = basicScroll.create({
-//         elem: parralaxElement,
-//         from: 'top-middle',
-//         to: 'top-top',
-//         direct: false,
-//         inside: (instance, percentage, props) => {
-//             console.log('viewport is inside from and to')
-//         },
-//         outside: (instance, percentage, props) => {
-//             console.log('viewport is outside from and to')
-//         },
-//         props: {
-//             '--ty': {
-//                 from,
-//                 to,
-//                 timing,
-//
-//             },
-//         },
-//     });
-//     instance.start();
-// }
+new ScrollMagic.Scene({ triggerElement: revealElements })
+    .setClassToggle(bottomNav, 'navigation--visible') // add class toggle
+    .addTo(controller);
