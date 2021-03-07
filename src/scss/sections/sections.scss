@@ -1,6 +1,9 @@
-.parallax {
-    transform: translateY(var(--ty)); 
-}
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+  }
 
 .section--fullscreen {
     min-height: 100vh;
