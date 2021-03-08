@@ -73,8 +73,9 @@
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     opacity: 0;
-    animation: fadeIn2 1.5s 1s forwards, bounce-mobile 2s infinite ease-in-out;
-    @media screen and (min-width: 400px) {
+    display: none;
+    @media screen and (min-width: 600px) {
+        display: block;
         animation: fadeIn2 1.5s 1s forwards, bounce 2s infinite ease-in-out;
         bottom: 50px;
     }
