@@ -5,6 +5,16 @@
     -o-transition: none !important;
   }
 
+p {
+    a {
+        text-decoration: underline;
+        color: black;
+        &:hover {
+            color: $red;
+        }
+    }
+}
+
 .section--fullscreen {
     min-height: 100vh;
     width: 100vw;
