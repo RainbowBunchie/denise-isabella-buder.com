@@ -2,6 +2,9 @@
     display: flex;
     align-items: center;
     justify-items: center;
+    transform: translateX(-60px);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    // opacity: 0;
     .wrapper {
         display: flex;
         justify-content: center;
@@ -10,7 +13,11 @@
         flex-wrap: wrap;
     }
 }
-
+.section--animate.about-me {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}  
 .about-me__headline {
     width: 100%;
     margin-bottom: 1em;
