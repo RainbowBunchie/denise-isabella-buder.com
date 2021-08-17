@@ -14,7 +14,12 @@
     margin-bottom: 2em;
     width: 80%;
     max-width: 300px;
+    max-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media screen and (min-width: 1100px) {
+        max-height: auto;
         width: 300px;
     }
 }
@@ -43,6 +48,7 @@
 
 .header__image {
     position: relative;
+    max-height: 50vh;
 }
 
 .header__image--1:hover {
@@ -57,6 +63,11 @@
 
 .header__image--1 {
     position: absolute;
+    max-height: 50vh;
+}
+
+.header__image--2 {
+    max-height: 50vh;
 }
 
 .header__arrow {
