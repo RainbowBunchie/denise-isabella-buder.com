@@ -7,3 +7,11 @@ import TheCharacter from '@/components/TheCharacter.vue';
     <TheCharacter />
   </main>
 </template>
+
+<style scoped>
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+</style>
