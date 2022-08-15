@@ -10,14 +10,6 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
-    },
-    {
       path: '/data-policy',
       name: 'data-policy',
       component: () => import('../views/DataPolicyView.vue'),
@@ -28,6 +20,15 @@ const router = createRouter({
       component: () => import('../views/ImprintView.vue'),
     },
   ],
+  scrollBehavior(to) {
+    console.log(to.hash);
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      };
+    }
+  },
 });
 
 export default router;
