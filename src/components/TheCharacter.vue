@@ -402,7 +402,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .character {
   background-color: lightblue;
   border-radius: 2rem;
@@ -412,5 +412,7 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  border-radius: 100%;
+  overflow: hidden;
 }
 </style>
