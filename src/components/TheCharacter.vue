@@ -37,8 +37,8 @@ function updateWindowSize() {
 }
 
 function updateMouseCords(event: MouseEvent) {
-  xMousePos = event.pageX;
-  yMousePos = event.pageY;
+  xMousePos = event.clientX;
+  yMousePos = event.clientY;
 }
 
 function initCharacter() {
@@ -432,5 +432,9 @@ onUnmounted(() => window.removeEventListener('mousemove', updateWindowSize));
   align-items: flex-end;
   border-radius: 100%;
   overflow: hidden;
+
+  svg {
+    overflow: visible;
+  }
 }
 </style>
