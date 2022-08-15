@@ -1,16 +1,75 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
 import gsap from 'gsap';
 
-onMounted(() => {
+interface Character {
+  eyes: {
+    all: NodeList;
+    open: {
+      left: NodeList;
+      right: NodeList;
+    };
+    closed: {
+      left: NodeList;
+      right: NodeList;
+    };
+  };
+  face: Element;
+  hairFront: Element;
+  hairBack: Element;
+  ear: NodeList;
+  eyebrowLeft: Element;
+  eyebrowRight: Element;
+  innerFace: Element;
+}
+
+let xMousePos: number;
+let yMousePos: number;
+let character: Character;
+let height: number = window.innerHeight;
+let width: number = window.innerWidth;
+let storedxMousePos = 0;
+let storedyMousePos = 0;
+
+function updateWindowSize() {
+  height = window.innerHeight;
+  width = window.innerWidth;
+}
+
+function updateMouseCords(event: MouseEvent) {
+  xMousePos = event.pageX;
+  yMousePos = event.pageY;
+}
+
+function initCharacter() {
+  character = {
+    eyes: {
+      all: document.querySelectorAll('.eye'),
+      open: {
+        left: document.querySelectorAll('.eyes--open .eye--left'),
+        right: document.querySelectorAll('.eyes--open .eye--right'),
+      },
+      closed: {
+        left: document.querySelectorAll('.eyes--closed .eye--left'),
+        right: document.querySelectorAll('.eyes--closed .eye--right'),
+      },
+    },
+    face: document.querySelector('.face--outer') as Element,
+    hairFront: document.querySelector('.hair--front') as Element,
+    hairBack: document.querySelector('.hair--back') as Element,
+    ear: document.querySelectorAll('.ear'),
+    eyebrowLeft: document.querySelector('.eyebrow--left') as Element,
+    eyebrowRight: document.querySelector('.eyebrow--right') as Element,
+    innerFace: document.querySelector('.face--inner') as Element,
+  };
+}
+
+function addBlinking() {
   const blink = gsap.timeline({
     repeat: 10,
     repeatDelay: 5,
     paused: false,
   });
-
-  gsap.set('.ear-right', { transformOrigin: '0% 50%' });
-  gsap.set('.ear-left', { transformOrigin: '100% 50%' });
 
   blink
     .to(
@@ -47,118 +106,76 @@ onMounted(() => {
     );
 
   blink.play();
-
-  // mouse stuff
-
-  let xPosition: number;
-  let yPosition: number;
-
-  let height: number;
-  let width: number;
-
-  function percentage(partialValue: number, totalValue: number) {
-    console.log('percetage');
-    console.log(partialValue);
-    console.log(totalValue);
-    return (100 * partialValue) / totalValue;
+}
+function percentage(partialValue: number, totalValue: number) {
+  return (100 * partialValue) / totalValue;
+}
+function animateFace() {
+  if (
+    !xMousePos ||
+    (storedxMousePos === xMousePos && storedyMousePos === yMousePos)
+  ) {
+    return;
   }
 
-  let storedXPosition = 0;
-  let storedYPosition = 0;
+  // range from -50 to 50
+  const x = percentage(xMousePos, width) - 50;
+  const y = percentage(yMousePos, height) - 50;
 
-  const dom = {
-    eye: document.querySelectorAll('.eye'),
-    face: document.querySelector('.face--outer'),
-    hairFront: document.querySelector('.hair--front'),
-    hairBack: document.querySelector('.hair--back'),
-    ear: document.querySelectorAll('.ear'),
-    eyebrowLeft: document.querySelector('.eyebrow--left'),
-    eyebrowRight: document.querySelector('.eyebrow--right'),
-    innerFace: document.querySelector('.face--inner'),
-  };
+  gsap.to(character.face, {
+    yPercent: y / 30,
+    xPercent: x / 30,
+  });
+  gsap.to(character.eyes.all, {
+    yPercent: y / 3,
+    xPercent: x / 2,
+  });
+  gsap.to(character.innerFace, {
+    yPercent: y / 6,
+    xPercent: x / 4,
+  });
+  gsap.to(character.hairFront, {
+    yPercent: y / 15,
+    xPercent: x / 22,
+  });
+  gsap.to(character.hairBack, {
+    yPercent: (y / 20) * -1,
+    xPercent: (x / 20) * -1,
+  });
+  gsap.to(character.ear, {
+    yPercent: (y / 3) * -1,
+    xPercent: (x / 15) * -1,
+  });
+  gsap.to([character.eyebrowLeft, character.eyebrowRight], {
+    yPercent: y * 2.5,
+    xPercent: x / 2.5,
+  });
 
-  function animateFace() {
-    if (!xPosition) return;
-    // important, only recalculating if the value changes
-    if (storedXPosition === xPosition && storedYPosition === yPosition) return;
+  storedxMousePos = xMousePos;
+  storedyMousePos = yMousePos;
+}
 
-    // range from -50 to 50
-    const x = percentage(xPosition, width) - 50;
-    const y = percentage(yPosition, height) - 50;
+function addFaceAnimation() {
+  gsap.set('.ear-right', { transformOrigin: '0% 50%' });
+  gsap.set('.ear-left', { transformOrigin: '100% 50%' });
 
-    // range from -20 to 80
-    const yHigh = percentage(yPosition, height) - 20;
-    // range from -80 to 20
-    const yLow = percentage(yPosition, height) - 80;
+  const safeToAnimate = window.matchMedia(
+    '(prefers-reduced-motion: no-preference)'
+  ).matches;
 
-    console.log('animating....');
-
-    console.log(yHigh);
-    console.log(x);
-
-    gsap.to(dom.face, {
-      yPercent: yLow / 30,
-      xPercent: x / 30,
-    });
-    gsap.to(dom.eye, {
-      yPercent: yHigh / 3,
-      xPercent: x / 2,
-    });
-    gsap.to(dom.innerFace, {
-      yPercent: y / 6,
-      xPercent: x / 8,
-    });
-    gsap.to(dom.hairFront, {
-      yPercent: yHigh / 15,
-      xPercent: x / 22,
-    });
-    gsap.to(dom.hairBack, {
-      yPercent: (yLow / 20) * -1,
-      xPercent: (x / 20) * -1,
-    });
-    gsap.to(dom.ear, {
-      yPercent: (y / 1.5) * -1,
-      xPercent: (x / 10) * -1,
-    });
-    gsap.to([dom.eyebrowLeft, dom.eyebrowRight], {
-      yPercent: y * 2.5,
-    });
-
-    storedXPosition = xPosition;
-    storedYPosition = yPosition;
+  if (safeToAnimate) {
+    window.addEventListener('mousemove', updateMouseCords);
+    gsap.ticker.add(animateFace);
   }
+}
 
-  function updateScreenCoords(event: MouseEvent) {
-    xPosition = event.clientX;
-    yPosition = event.clientY;
-  }
-
-  // update if browser resizes
-  function updateWindowSize() {
-    height = window.innerHeight;
-    width = window.innerWidth;
-  }
-  updateWindowSize();
+onMounted(() => {
+  initCharacter();
+  addBlinking();
+  addFaceAnimation();
   window.addEventListener('resize', updateWindowSize);
-
-  addMouseEvent();
-
-  // function being called at the end of main timeline
-  function addMouseEvent() {
-    const safeToAnimate = window.matchMedia(
-      '(prefers-reduced-motion: no-preference)'
-    ).matches;
-
-    if (safeToAnimate) {
-      window.addEventListener('mousemove', updateScreenCoords);
-
-      // gsap's RAF, falls back to set timeout
-      gsap.ticker.add(animateFace);
-
-      blink.play();
-    }
-  }
 });
+onUnmounted(() => window.removeEventListener('mousemove', updateWindowSize));
 </script>
 
 <template>
@@ -403,8 +420,9 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
+@import '../assets/variables.scss';
 .character {
-  background-color: lightblue;
+  background-color: $color--primary;
   border-radius: 2rem;
   padding: 2rem 2rem 0rem 2rem;
   width: calc(50vh + 4rem);

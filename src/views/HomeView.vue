@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import TheCharacter from '@/components/TheCharacter.vue';
+import TheHeader from '@/sections/TheHeader.vue';
 </script>
 
 <template>
   <main>
-    <TheCharacter />
+    <TheHeader />
   </main>
 </template>
 
