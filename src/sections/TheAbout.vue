@@ -4,7 +4,7 @@ import TheHeadline from '../components/TheHeadline.vue';
 
 <template>
   <section class="section section--about about" id="about">
-    <TheHeadline color="#000" text="About me" />
+    <TheHeadline color="#2a2726" text="About me" />
   </section>
 </template>
 

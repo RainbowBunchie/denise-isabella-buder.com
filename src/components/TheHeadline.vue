@@ -27,8 +27,9 @@ const cssVars = computed(() => '--color:' + props.color);
     font-family: $font--heading;
     font-weight: 700;
     color: var(--color);
+    text-transform: uppercase;
   }
-  &__headline {
+  &__text {
     font-size: 3rem;
   }
   &__backdrop {
@@ -40,7 +41,7 @@ const cssVars = computed(() => '--color:' + props.color);
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    opacity: 0.5;
+    opacity: 0.1;
   }
 }
 </style>

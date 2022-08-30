@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TheHeadline from '../components/TheHeadline.vue';
+</script>
 
 <template>
-  <section class="section section--work work" id="work"></section>
+  <section class="section section--work work" id="work">
+    <TheHeadline color="#2a2726" text="Projects" />
+  </section>
 </template>
 
 <style scoped lang="scss">
