@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import TheHeadline from '../components/TheHeadline.vue';
+import TheProject from '../components/TheProject.vue';
 </script>
 
 <template>
   <section class="section section--work work" id="work">
-    <TheHeadline color="#2a2726" text="Projects" />
+    <div class="container">
+      <TheHeadline color="#2a2726" text="Projects" />
+      <TheProject />
+      <TheProject />
+    </div>
   </section>
 </template>
 

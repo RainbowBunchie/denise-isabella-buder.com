@@ -75,6 +75,29 @@ body {
 h1,
 h1 * {
   font-weight: 700;
+  font-size: 2rem;
+  font-family: $font--heading;
+}
+
+h3,
+h3 * {
+  font-weight: 700;
   font-size: 3rem;
   font-family: $font--heading;
+}
+
+.container {
+  max-width: $contaienr--large-desktop;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 12rem 0 10rem;
 }

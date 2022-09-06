@@ -23,6 +23,8 @@ const cssVars = computed(() => '--color:' + props.color);
 @import '../assets/variables.scss';
 .headline {
   position: relative;
+  margin-bottom: 5rem;
+  text-align: center;
   * {
     font-family: $font--heading;
     font-weight: 700;
