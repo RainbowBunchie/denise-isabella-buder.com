@@ -1,4 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { computed } from 'vue';
+import TheHashtag from './TheHashtag.vue';
+
+interface Props {
+  imagePosition: string;
+  people: { name: string; link?: string }[];
+}
+const props = defineProps<Props>();
+const flexDirection = computed(() =>
+  props.imagePosition == 'right' ? 'row-reverse' : 'row'
+);
+</script>
 
 <template>
   <div class="project">
@@ -6,7 +18,7 @@
       <img class="img__image" src="../assets/images/iphine.png" />
     </div>
     <div class="project__info info">
-      <h3 class="">Turtlet</h3>
+      <h3>Turtlet</h3>
       <p>
         slow media messaging web and app that counters the fast moving zeitgeist
         of our digital society by giving more emotional value and individualism
@@ -16,7 +28,14 @@
       <h4>Technologies used</h4>
       <p>Tags go here</p>
       <h4>People I worked with</h4>
-      <p>perople go here</p>
+      <div class="info__people-tags people-tags">
+        <TheHashtag
+          :key="person.name"
+          v-for="person in people"
+          :text="person.name"
+          :link="person.link"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -27,6 +46,7 @@
 .project {
   display: flex;
   gap: 10rem;
+  flex-direction: v-bind(flexDirection);
   &__img {
     position: relative;
     display: flex;
@@ -52,6 +72,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    .people-tags {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+    }
   }
 }
 </style>
