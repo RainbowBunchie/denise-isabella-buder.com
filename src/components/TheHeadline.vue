@@ -7,15 +7,15 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-const cssVars = computed(() => '--color:' + props.color);
+const color = computed(() => props.color);
 </script>
 
 <template>
   <div class="headline">
-    <h2 :style="cssVars" :class="cssVars" class="headline__text">
+    <h2 class="headline__text">
       {{ text }}
     </h2>
-    <span :style="cssVars" class="headline__backdrop">{{ text }}</span>
+    <span class="headline__backdrop">{{ text }}</span>
   </div>
 </template>
 
@@ -28,7 +28,7 @@ const cssVars = computed(() => '--color:' + props.color);
   * {
     font-family: $font--heading;
     font-weight: 700;
-    color: var(--color);
+    color: v-bind(color);
     text-transform: uppercase;
   }
   &__text {
