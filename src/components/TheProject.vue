@@ -3,10 +3,16 @@ import { computed } from 'vue';
 import TheHashtag from './TheHashtag.vue';
 
 interface Props {
+  title: string;
+  description: string;
   imagePosition: string;
+  technologies?: string[];
   people: { name: string; link?: string }[];
 }
+
 const props = defineProps<Props>();
+console.log(props.technologies);
+
 const flexDirection = computed(() =>
   props.imagePosition == 'right' ? 'row-reverse' : 'row'
 );
@@ -18,16 +24,20 @@ const flexDirection = computed(() =>
       <img class="img__image" src="../assets/images/iphine.png" />
     </div>
     <div class="project__info info">
-      <h3>Turtlet</h3>
+      <h3>{{ props.title }}</h3>
       <p>
-        slow media messaging web and app that counters the fast moving zeitgeist
-        of our digital society by giving more emotional value and individualism
-        to its messages (so called ”Turtlets”)
+        {{ props.description }}
       </p>
       <p>links go here</p>
-      <h4>Technologies used</h4>
-      <p>Tags go here</p>
-      <h4>People I worked with</h4>
+      <h4 class="info__subline">Technologies used</h4>
+      <div class="info__technologies technologies">
+        <TheHashtag
+          :key="technology"
+          v-for="technology in props.technologies"
+          :text="technology"
+        />
+      </div>
+      <h4 class="info__subline">People I worked with</h4>
       <div class="info__people-tags people-tags">
         <TheHashtag
           :key="person.name"
@@ -44,9 +54,13 @@ const flexDirection = computed(() =>
 @import '../assets/variables.scss';
 
 .project {
+  margin-top: 7.5rem;
   display: flex;
   gap: 10rem;
   flex-direction: v-bind(flexDirection);
+  &:nth-child(3) {
+    margin-top: 7.5rem;
+  }
   &__img {
     position: relative;
     display: flex;
@@ -77,6 +91,18 @@ const flexDirection = computed(() =>
       display: flex;
       gap: 0.5rem;
     }
+
+    .people-tags,
+    .technologies {
+      margin-top: 0.25rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+  .info__subline {
+    font-weight: bold;
+    margin-top: 1.5rem;
+    font-size: 1.125rem;
   }
 }
 </style>

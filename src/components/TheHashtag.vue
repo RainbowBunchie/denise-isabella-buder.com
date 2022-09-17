@@ -9,13 +9,14 @@ const link = computed(() => props.link);
 </script>
 
 <template>
-  <p
+  <component
+    :is="link ? 'a' : 'p'"
     :href="link ? link : ''"
     class="hashtag"
     :class="link ? 'hashtag--clickable' : ''"
   >
     {{ text }}
-  </p>
+  </component>
 </template>
 
 <style scoped lang="scss">
@@ -25,6 +26,8 @@ const link = computed(() => props.link);
   border-radius: 3rem;
   padding: 0.125rem 1rem;
   transition: all 0.2s ease;
+  color: $color--primary;
+  text-decoration: none;
   &:hover {
     background-color: $color--primary;
     color: $color--accent;

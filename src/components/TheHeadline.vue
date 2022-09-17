@@ -32,10 +32,13 @@ const color = computed(() => props.color);
     text-transform: uppercase;
   }
   &__text {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    @media only screen and (min-width: $breakpoint--tablet) {
+      font-size: 3rem;
+    }
   }
   &__backdrop {
-    font-size: 10rem;
+    font-size: 7.5rem;
     position: absolute;
     top: 50%;
     width: 100vw;
@@ -44,6 +47,11 @@ const color = computed(() => props.color);
     transform: translate(-50%, -50%);
     text-align: center;
     opacity: 0.1;
+    width: 50000vw;
+
+    @media only screen and (min-width: $breakpoint--tablet) {
+      font-size: 10rem;
+    }
   }
 }
 </style>

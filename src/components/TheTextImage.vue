@@ -32,11 +32,16 @@
 <style scoped lang="scss">
 @import '../assets/variables.scss';
 .text-image {
-  padding: 6rem 5rem;
   position: relative;
   z-index: 50;
-  display: block;
-  gap: 5rem;
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media only screen and (min-width: $breakpoint--desktop) {
+    gap: 5rem;
+    padding: 6rem 5rem;
+    flex-direction: row;
+  }
 
   &::after {
     content: '';
@@ -48,6 +53,10 @@
     background-color: $color--secondary;
     height: calc(400px + 12rem);
     width: calc(100% - (400px + 12rem) / 2);
+    display: none;
+    @media only screen and (min-width: $breakpoint--desktop) {
+      display: block;
+    }
   }
 
   &::before {
@@ -59,21 +68,63 @@
     background-color: $color--secondary;
     height: calc(400px + 12rem);
     width: calc(400px + 12rem);
+    display: none;
+
+    @media only screen and (min-width: $breakpoint--desktop) {
+      display: block;
+    }
   }
   * {
     color: $color--text;
   }
 
-  display: flex;
   &__text {
     z-index: 4;
+    background-color: $color--secondary;
+    padding: 0 3rem 3rem 3rem;
+    max-width: 600px;
+    position: relative;
+
+    @media only screen and (min-width: $breakpoint--desktop) {
+      background-color: transparent;
+      padding: 0;
+      max-width: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: calc(100vw - 2rem);
+      width: 100%;
+      max-height: 600px;
+      top: -50vw;
+      border-radius: 0;
+      left: 0;
+      background-color: $color--secondary;
+      @media only screen and (min-width: calc(600px + 6rem)) {
+        top: -300px;
+      }
+      @media only screen and (min-width: $breakpoint--desktop) {
+        display: none;
+      }
+    }
   }
   &__img {
     border-radius: 100%;
     z-index: 4;
-    width: auto;
-    height: 400px;
-    width: 400px;
+    height: 100vw;
+    width: 100vw;
+    max-width: 600px;
+    max-height: 600px;
+    background-color: $color--secondary;
+    padding: 3rem;
+    position: relative;
+    @media only screen and (min-width: $breakpoint--desktop) {
+      flex-direction: row;
+      height: 400px;
+      width: 400px;
+      padding: 0;
+    }
   }
 }
 </style>
