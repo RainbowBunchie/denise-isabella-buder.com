@@ -8,6 +8,8 @@ interface Props {
   imagePosition: string;
   technologies?: string[];
   people: { name: string; link?: string }[];
+  links?: { text: string; url?: string }[];
+  image: string;
 }
 
 const props = defineProps<Props>();
@@ -21,14 +23,13 @@ const flexDirection = computed(() =>
 <template>
   <div class="project">
     <div class="project__img img">
-      <img class="img__image" src="../assets/images/iphine.png" />
+      <img class="img__image" :src="props.image" />
     </div>
     <div class="project__info info">
       <h3>{{ props.title }}</h3>
-      <p>
+      <p class="info__description description">
         {{ props.description }}
       </p>
-      <p>links go here</p>
       <h4 class="info__subline">Technologies used</h4>
       <div class="info__technologies technologies">
         <TheHashtag
@@ -46,6 +47,11 @@ const flexDirection = computed(() =>
           :link="person.link"
         />
       </div>
+      <template :key="link.url" v-for="link in links">
+        <a target="_blank" class="info__link link" :href="link.url">{{
+          link.text
+        }}</a>
+      </template>
     </div>
   </div>
 </template>
@@ -58,13 +64,13 @@ const flexDirection = computed(() =>
   flex-direction: column;
   gap: 2rem;
   @media only screen and (min-width: $breakpoint--desktop) {
-    margin-top: 7.5rem;
+    margin-top: 7rem;
     gap: 10rem;
     flex-direction: v-bind(flexDirection);
   }
 
-  &:nth-child(3) {
-    margin-top: 7.5rem;
+  &:nth-child(2) {
+    margin-top: 0;
   }
   &__img {
     position: relative;
@@ -91,10 +97,32 @@ const flexDirection = computed(() =>
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     .people-tags {
       margin-top: 0.5rem;
       display: flex;
       gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .link {
+      font-size: 1.125rem;
+      font-weight: 900;
+      text-decoration: none;
+      color: $color--primary;
+      font-style: italic;
+      padding-left: 35px;
+
+      &::before {
+        content: '';
+        width: 25px;
+        height: 4px;
+        background-color: $color--primary;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
 
     .people-tags,
