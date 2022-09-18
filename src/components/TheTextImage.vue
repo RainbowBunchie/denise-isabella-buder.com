@@ -37,6 +37,7 @@
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
+  align-items: center;
 
   @media only screen and (min-width: $breakpoint--desktop) {
     gap: 5rem;
@@ -85,29 +86,29 @@
     padding: 0 2rem 3rem;
     max-width: 600px;
     position: relative;
-
-    @media only screen and (min-width: $breakpoint--desktop) {
-      background-color: transparent;
-      padding: 0;
-      max-width: none;
-    }
-
     &::before {
       content: '';
-      position: absolute;
       height: calc(100vw - 2rem);
-      width: 100%;
-      max-height: 600px;
-      top: calc(-50vw + 1rem);
-      border-radius: 0;
       left: 0;
+      width: 100%;
+      top: calc(-100vw + 3rem);
+      border-top-left-radius: 100%;
+      border-top-right-radius: 100%;
+      position: absolute;
       background-color: $color--secondary;
-      @media only screen and (min-width: calc(600px + 6rem)) {
+      @media only screen and (min-width: calc(600px + 2rem)) {
+        height: 600px;
         top: -300px;
       }
       @media only screen and (min-width: $breakpoint--desktop) {
         display: none;
       }
+    }
+
+    @media only screen and (min-width: $breakpoint--desktop) {
+      background-color: transparent;
+      padding: 0;
+      max-width: none;
     }
   }
   &__img {
