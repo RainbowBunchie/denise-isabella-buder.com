@@ -99,6 +99,8 @@
       @media only screen and (min-width: calc(600px + 2rem)) {
         height: 600px;
         top: -300px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
       }
       @media only screen and (min-width: $breakpoint--desktop) {
         display: none;
