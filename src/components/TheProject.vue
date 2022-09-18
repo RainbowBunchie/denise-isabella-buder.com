@@ -54,10 +54,15 @@ const flexDirection = computed(() =>
 @import '../assets/variables.scss';
 
 .project {
-  margin-top: 7.5rem;
   display: flex;
-  gap: 10rem;
-  flex-direction: v-bind(flexDirection);
+  flex-direction: column;
+  gap: 2rem;
+  @media only screen and (min-width: $breakpoint--desktop) {
+    margin-top: 7.5rem;
+    gap: 10rem;
+    flex-direction: v-bind(flexDirection);
+  }
+
   &:nth-child(3) {
     margin-top: 7.5rem;
   }
