@@ -4,7 +4,7 @@ import TheHeadline from '../components/TheHeadline.vue';
 
 <template>
   <section class="section section--skill skill" id="skill">
-    <TheHeadline color="rgb(188, 19, 48)" text="My Skillset" />
+    <TheHeadline color="rgb(188, 19, 48)" text="Skillset" />
   </section>
 </template>
 
