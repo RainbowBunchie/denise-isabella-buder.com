@@ -3,10 +3,32 @@ import { RouterLink } from 'vue-router';
 </script>
 <template>
   <nav class="nav nav--main">
-    <RouterLink to="/#about">About</RouterLink>
-    <RouterLink to="/#skill">My Skills</RouterLink>
-    <RouterLink to="/#work">My Work</RouterLink>
-    <RouterLink to="/#contact">Contact</RouterLink>
+    <RouterLink
+      :class="$route.fullPath.includes('#about') ? 'router-link--active' : ''"
+      :to="{ name: 'home', hash: '#about' }"
+      exact
+      >About</RouterLink
+    >
+    <RouterLink
+      :class="$route.fullPath.includes('#skill') ? 'router-link--active' : ''"
+      :to="{ name: 'home', hash: '#skill' }"
+      exact
+      >Skillset</RouterLink
+    >
+    <RouterLink
+      :class="
+        $route.fullPath.includes('#experience') ? 'router-link--active' : ''
+      "
+      exact
+      :to="{ name: 'home', hash: '#experience' }"
+      >Experience</RouterLink
+    >
+    <RouterLink
+      :class="$route.fullPath.includes('#work') ? 'router-link--active' : ''"
+      :to="{ name: 'home', hash: '#work' }"
+      exact
+      >Projects</RouterLink
+    >
   </nav>
 </template>
 <style scoped lang="scss">
@@ -27,7 +49,7 @@ import { RouterLink } from 'vue-router';
     cursor: pointer;
     text-transform: uppercase;
     position: relative;
-    &.router-link-active {
+    &.router-link--active {
       padding-left: calc(50px + 0.5rem);
       &::before {
         content: '';

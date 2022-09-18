@@ -3,7 +3,7 @@ import Header from '@/sections/TheHeader.vue';
 import About from '@/sections/TheAbout.vue';
 import Skill from '@/sections/TheSkill.vue';
 import Work from '@/sections/TheWork.vue';
-import Contact from '@/sections/TheContact.vue';
+import TheExperience from '../sections/TheExperience.vue';
 </script>
 
 <template>
@@ -11,8 +11,8 @@ import Contact from '@/sections/TheContact.vue';
     <Header />
     <About />
     <Skill />
+    <TheExperience />
     <Work />
-    <Contact />
   </main>
 </template>
 

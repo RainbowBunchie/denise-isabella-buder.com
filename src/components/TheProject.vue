@@ -129,6 +129,7 @@ const flexDirection = computed(() =>
     .technologies {
       margin-top: 0.25rem;
       display: flex;
+      flex-wrap: wrap;
       gap: 0.5rem;
     }
   }

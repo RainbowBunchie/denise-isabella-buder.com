@@ -21,7 +21,6 @@ const router = createRouter({
     },
   ],
   scrollBehavior(to) {
-    console.log(to.hash);
     if (to.hash) {
       return {
         el: to.hash,

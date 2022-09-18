@@ -1,13 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TheHeadline from '../components/TheHeadline.vue';
+</script>
 
 <template>
-  <section class="section section--contact contact" id="contact"></section>
+  <section class="section section--experience experience" id="experience">
+    <TheHeadline color="rgb(188, 19, 48)" text="Experience" />
+  </section>
 </template>
 
 <style scoped lang="scss">
 @import '../assets/variables.scss';
 
-.contact {
+.experience {
   width: 100%;
   display: flex;
   flex-direction: column;
