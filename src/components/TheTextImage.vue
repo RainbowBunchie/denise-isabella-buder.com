@@ -36,6 +36,7 @@
   z-index: 50;
   display: flex;
   flex-direction: column-reverse;
+  width: 100%;
 
   @media only screen and (min-width: $breakpoint--desktop) {
     gap: 5rem;
@@ -81,7 +82,7 @@
   &__text {
     z-index: 4;
     background-color: $color--secondary;
-    padding: 0 3rem 3rem 3rem;
+    padding: 0 2rem 3rem;
     max-width: 600px;
     position: relative;
 
@@ -97,7 +98,7 @@
       height: calc(100vw - 2rem);
       width: 100%;
       max-height: 600px;
-      top: -50vw;
+      top: calc(-50vw + 1rem);
       border-radius: 0;
       left: 0;
       background-color: $color--secondary;
@@ -112,12 +113,12 @@
   &__img {
     border-radius: 100%;
     z-index: 4;
-    height: 100vw;
-    width: 100vw;
+    height: auto;
+    width: 100%;
     max-width: 600px;
     max-height: 600px;
     background-color: $color--secondary;
-    padding: 3rem;
+    padding: 2rem;
     position: relative;
     @media only screen and (min-width: $breakpoint--desktop) {
       flex-direction: row;
