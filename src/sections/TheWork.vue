@@ -89,6 +89,7 @@ const projects = [
   align-items: center;
   min-height: 100vh;
   background-color: $color--accent;
+  overflow-y: hidden;
   &::before {
     content: '';
     width: 450vw;

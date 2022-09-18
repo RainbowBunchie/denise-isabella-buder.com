@@ -25,6 +25,9 @@ const color = computed(() => props.color);
   position: relative;
   margin-bottom: 5rem;
   text-align: center;
+  padding: 2rem 0;
+  width: 100vw;
+  overflow: hidden;
   * {
     font-family: $font--heading;
     font-weight: 700;
@@ -37,7 +40,9 @@ const color = computed(() => props.color);
       font-size: 3rem;
     }
   }
-  &__backdrop {
+  &__backdrop,
+  &::before {
+    content: v-bind(text);
     font-size: 7.5rem;
     position: absolute;
     top: 50%;

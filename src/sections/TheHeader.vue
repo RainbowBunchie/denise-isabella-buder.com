@@ -20,6 +20,7 @@ import TheCharacter from '@/components/TheCharacter.vue';
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
   &__headline {
     color: $color--primary;
   }
