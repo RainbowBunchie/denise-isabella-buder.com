@@ -83,7 +83,7 @@ const flexDirection = computed(() =>
       left: 50%;
       transform: translateX(-50%);
       bottom: -3rem;
-      background-color: $color--secondary;
+      background-color: $color--accent;
       width: 430px;
       height: 430px;
       border-radius: 100%;

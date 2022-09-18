@@ -117,7 +117,7 @@ const projects = [
 <template>
   <section class="section section--work work" id="work">
     <div class="container">
-      <TheHeadline color="#2a2726" text="Projects" />
+      <TheHeadline color="rgb(188, 19, 48)" text="Projects" />
       <TheProject
         v-for="(project, index) in projects"
         :title="project.title"
@@ -145,12 +145,12 @@ const projects = [
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: $color--accent;
+  background-color: $color--secondary;
   &::before {
     content: '';
     width: 450vw;
     height: 450vw;
-    background-color: $color--accent;
+    background-color: $color--secondary;
     position: absolute;
     border-radius: 100%;
     top: -7.5vw;

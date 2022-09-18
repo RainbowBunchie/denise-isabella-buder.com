@@ -4,7 +4,7 @@ import TheHeadline from '../components/TheHeadline.vue';
 
 <template>
   <section class="section section--experience experience" id="experience">
-    <TheHeadline color="rgb(188, 19, 48)" text="Experience" />
+    <TheHeadline color="#2a2726" text="Experience" />
   </section>
 </template>
 
@@ -18,6 +18,6 @@ import TheHeadline from '../components/TheHeadline.vue';
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: $color--primary;
+  background-color: $color--accent;
 }
 </style>
