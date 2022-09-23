@@ -21,10 +21,11 @@ const router = createRouter({
     },
   ],
   scrollBehavior(to) {
-    if (to.hash) {
+    if (to.params.savePosition) return {};
+    else if (to.hash) {
       return {
         el: to.hash,
-        behavior: 'smooth',
+        behavior: 'auto',
       };
     }
   },
