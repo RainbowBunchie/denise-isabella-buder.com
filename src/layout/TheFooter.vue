@@ -2,43 +2,32 @@
 import { RouterLink } from 'vue-router';
 </script>
 <template>
-  <nav class="nav nav--footer">
-    <RouterLink to="/data-policy">Data Policy</RouterLink>
-    <RouterLink to="/imprint">Imprint</RouterLink>
+  <nav class="nav nav--footer footer">
+    <div class="footer__links">
+      <RouterLink to="/data-policy">Data Policy</RouterLink>
+      <RouterLink to="/imprint">Imprint</RouterLink>
+
+      <font-awesome-icon :icon="['fab', 'github']" class="icon" />
+      <font-awesome-icon :icon="['fab', 'linkedin']" class="icon" />
+    </div>
+    <div class="footer__copyright">© 2022 Denise Buder</div>
   </nav>
 </template>
 <style scoped lang="scss">
 @import '../assets/variables.scss';
 
-.nav--main {
-  position: fixed;
-  left: 1rem;
-  top: 1rem;
-  z-index: 7000;
-  display: flex;
-  flex-direction: column;
-  a {
+.footer {
+  width: 100vw;
+  &__links {
+    background-color: $color--primary;
+    height: 400px;
+  }
+  &__copyright {
+    padding: 2rem;
+    background-color: $color--secondary;
+    text-align: center;
     color: $color--primary;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    position: relative;
-    &.router-link-active {
-      padding-left: calc(50px + 0.5rem);
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: calc(50%);
-        transform: translateY(-50%);
-        width: 50px;
-        height: 4px;
-        background-color: $color--primary;
-      }
-      font-style: italic;
-    }
+    font-weight: 900;
   }
 }
 </style>

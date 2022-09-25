@@ -114,3 +114,11 @@ html {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+body {
+  overflow: hidden;
+}
+
+.icon {
+  color: $color--secondary;
+}
