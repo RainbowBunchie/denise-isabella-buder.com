@@ -13,17 +13,18 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-console.log(props.technologies);
-
 const flexDirection = computed(() =>
   props.imagePosition == 'right' ? 'row-reverse' : 'row'
+);
+const imgUrl = computed(() =>
+  new URL(`../assets/images/${props.image}`, import.meta.url).toString()
 );
 </script>
 
 <template>
   <div class="project">
     <div class="project__img img">
-      <img class="img__image" :src="props.image" />
+      <img :src="imgUrl" />
     </div>
     <div class="project__info info">
       <h3>{{ props.title }}</h3>
