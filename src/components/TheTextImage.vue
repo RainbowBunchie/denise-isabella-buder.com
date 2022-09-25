@@ -116,14 +116,12 @@
   &__img {
     border-radius: 100%;
     z-index: 4;
-    height: auto;
-    width: 100%;
-    max-width: 600px;
-    max-height: 600px;
+    height: calc(100vw - 3rem);
+    width: calc(100vw - 3rem);
     background-color: $color--secondary;
     padding: 2rem;
     position: relative;
-    @media only screen and (min-width: $breakpoint--desktop) {
+    @media only screen and (min-width: calc(600px + 2rem)) {
       flex-direction: row;
       height: 400px;
       width: 400px;
