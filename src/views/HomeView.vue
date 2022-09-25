@@ -20,7 +20,7 @@ function observeSections() {
   }
 
   const options = {
-    rootMargin: '0px 0px',
+    rootMargin: '-50% 0px',
     threshold: 0,
   };
   sectionObserver = new IntersectionObserver(sectionObserverHandler, options);

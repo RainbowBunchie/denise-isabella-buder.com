@@ -103,7 +103,7 @@ const skills = [
 </script>
 
 <template>
-  <section class="section section--skillset skillset" id="skill">
+  <section class="section section--skillset skillset" id="skillset">
     <TheHeadline color="rgb(188, 19, 48)" text="Skillset" />
     <div class="container">
       <div class="skillset__skills">

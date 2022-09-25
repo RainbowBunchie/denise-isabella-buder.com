@@ -10,8 +10,10 @@ import { RouterLink } from 'vue-router';
       >About</RouterLink
     >
     <RouterLink
-      :class="$route.fullPath.includes('#skill') ? 'router-link--active' : ''"
-      :to="{ name: 'home', hash: '#skill' }"
+      :class="
+        $route.fullPath.includes('#skillset') ? 'router-link--active' : ''
+      "
+      :to="{ name: 'home', hash: '#skillset' }"
       exact
       >Skillset</RouterLink
     >
