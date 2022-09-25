@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Header from '@/sections/TheHeader.vue';
 import About from '@/sections/TheAbout.vue';
-import Skill from '@/sections/TheSkill.vue';
+import Skillset from '@/sections/TheSkillset.vue';
 import Work from '@/sections/TheWork.vue';
 import TheExperience from '../sections/TheExperience.vue';
 import { useRouter, useRoute } from 'vue-router';
@@ -53,7 +53,7 @@ onMounted(() => {
   <main>
     <Header />
     <About />
-    <Skill />
+    <Skillset />
     <TheExperience />
     <Work />
   </main>

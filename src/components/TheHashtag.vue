@@ -28,6 +28,7 @@ const link = computed(() => props.link);
   transition: all 0.2s ease;
   color: $color--primary;
   text-decoration: none;
+  margin: 0;
   &:hover {
     background-color: $color--primary;
     color: $color--accent;
