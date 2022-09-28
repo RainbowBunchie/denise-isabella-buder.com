@@ -28,5 +28,8 @@ const props = defineProps<Props>();
 <style scoped lang="scss">
 @import '../assets/variables.scss';
 .accordion {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
 }
 </style>

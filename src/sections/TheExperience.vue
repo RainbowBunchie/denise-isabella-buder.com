@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TheHeadline from '../components/TheHeadline.vue';
 import TheAccordion from '../components/TheAccordion.vue';
+import TheSubline from '../components/TheSubline.vue';
 const work = [
   {
     title: 'Web Developer',
@@ -33,7 +34,12 @@ const experience = {};
 <template>
   <section class="section section--experience experience" id="experience">
     <TheHeadline color="#2a2726" text="Experience" />
-    <TheAccordion :items="work" />
+    <div class="container">
+      <TheSubline text="Work" color="dark"></TheSubline>
+      <TheAccordion :items="work" />
+      <TheSubline text="Education" color="dark"></TheSubline>
+      <TheAccordion :items="work" />
+    </div>
   </section>
 </template>
 
@@ -48,5 +54,6 @@ const experience = {};
   align-items: center;
   min-height: 100vh;
   background-color: $color--accent;
+  padding-bottom: 15rem;
 }
 </style>
