@@ -50,12 +50,13 @@
     position: absolute;
     display: block;
     left: 0;
-    top: 0;
+    top: 50%;
     z-index: 0;
     background-color: $color--secondary;
     height: calc(400px + 12rem);
     width: calc(100% - (400px + 12rem) / 2);
     display: none;
+    transform: translateY(-50%);
     @media only screen and (min-width: $breakpoint--desktop) {
       display: block;
     }
@@ -65,7 +66,8 @@
     content: '';
     position: absolute;
     right: 0;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: 100%;
     background-color: $color--secondary;
     height: calc(400px + 12rem);
@@ -98,9 +100,7 @@
       background-color: $color--secondary;
       @media only screen and (min-width: calc(600px + 2rem)) {
         height: 600px;
-        top: -300px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+        top: calc(-600px + 2rem);
       }
       @media only screen and (min-width: $breakpoint--desktop) {
         display: none;
@@ -123,9 +123,13 @@
     position: relative;
     @media only screen and (min-width: calc(600px + 2rem)) {
       flex-direction: row;
-      height: 400px;
-      width: 400px;
+      height: calc(600px - 4rem);
+      width: calc(600px - 4rem);
       padding: 0;
+    }
+    @media only screen and (min-width: $breakpoint--desktop) {
+      width: 400px;
+      height: 400px;
     }
   }
 }
