@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue';
 import TheAccordionItem from './TheAccordionItem.vue';
 interface Props {
   items: {

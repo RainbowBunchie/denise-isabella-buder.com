@@ -21,8 +21,7 @@ const uniqueId = computed(
       <p class="label__info" v-if="labelInfo">{{ labelInfo }}</p>
     </label>
     <div class="item__content">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum,
-      reiciendis!
+      {{ props.content }}
     </div>
   </div>
 </template>
@@ -57,9 +56,7 @@ const uniqueId = computed(
       font-size: 1.25rem;
       line-height: 1;
     }
-    /* Icon */
-    &:hover {
-    }
+
     &::before {
       content: '';
       width: 1.4rem;
@@ -92,13 +89,16 @@ const uniqueId = computed(
     }
   }
   &__content {
-    max-height: 0;
     height: 100%;
+    max-height: 0;
     padding: 0 2rem 0 20px;
     background-color: rgba($color: #000000, $alpha: 0.2);
     margin-left: 68px;
-
-    // transition: all 0.35s;
+    overflow: hidden;
+    opacity: 0.2;
+    // closing
+    transition: max-height 1.25s cubic-bezier(0, 1, 0, 1),
+      padding 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
 }
 
@@ -110,8 +110,12 @@ const uniqueId = computed(
     }
   }
   ~ .item__content {
+    opacity: 1;
     max-height: 100vh;
-    // padding: 1em;
+    // opening
+    transition: max-height 1.5s ease-in-out, padding 0.5s ease-in-out,
+      opacity 0.5s ease-in-out;
+    padding: 1rem 2rem 1rem 20px;
   }
 }
 </style>
