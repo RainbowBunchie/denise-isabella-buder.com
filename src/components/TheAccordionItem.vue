@@ -97,7 +97,7 @@ const uniqueId = computed(
     overflow: hidden;
     opacity: 0.2;
     // closing
-    transition: max-height 1.25s cubic-bezier(0, 1, 0, 1),
+    transition: max-height 1.5s cubic-bezier(0, 1, 0, 1),
       padding 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
 }
