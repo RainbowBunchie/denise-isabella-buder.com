@@ -5,30 +5,49 @@ import TheSubline from '../components/TheSubline.vue';
 const work = [
   {
     title: 'Web Developer',
-    subtitle: '@Nolimits Digital Business GmbH',
-    labelInfo: '2019-2021',
+    subtitle: '@ Nolimits Digital Business GmbH',
+    labelInfo: '2021-now',
     content: 'content',
   },
   {
-    title: 'Web Developer',
-    subtitle: '@MMCAgentur',
-    labelInfo: '2019-2021',
+    title: 'Frontend Developer (trainee)',
+    subtitle: '@ MMCAgentur',
+    labelInfo: '2018-2018',
     content: 'content',
   },
   {
-    title: 'Web Developer',
-    subtitle: '@nmc',
-    labelInfo: '2019-2021',
+    title: 'Graphic and web desinger (trainee)',
+    subtitle: '@ Raiffeisenbank Salzburg',
+    labelInfo: '2015-2015',
     content: 'content',
   },
   {
-    title: 'Web Developer',
-    subtitle: '@Nkeine ahnung',
-    labelInfo: '2019-2021',
+    title: 'Graphic designer (trainee)',
+    subtitle: '@ nmc Salzburg',
+    labelInfo: '2014-2014',
     content: 'content',
   },
 ];
-const experience = {};
+const education = [
+  {
+    title: 'Master of Science in Engineering (Web Engineering)',
+    subtitle: '@ University of Applied Sciences Salzburg',
+    labelInfo: '2019-2021',
+    content: 'content',
+  },
+  {
+    title: 'Bachelor of Science in Engineering (Web Engineering)',
+    subtitle: '@ University of Applied Sciences Salzburg',
+    labelInfo: '2016-2019',
+    content: 'content',
+  },
+  {
+    title: 'A-level (Graphic & communication design)',
+    subtitle: '@ HTBLuVA Salzburg',
+    labelInfo: '2011-2016',
+    content: 'content',
+  },
+];
 </script>
 
 <template>
@@ -38,7 +57,7 @@ const experience = {};
       <TheSubline text="Work" color="dark"></TheSubline>
       <TheAccordion :items="work" />
       <TheSubline text="Education" color="dark"></TheSubline>
-      <TheAccordion :items="work" />
+      <TheAccordion :items="education" />
     </div>
   </section>
 </template>

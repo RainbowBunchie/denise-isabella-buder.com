@@ -31,5 +31,6 @@ const props = defineProps<Props>();
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
+  margin-bottom: 5rem;
 }
 </style>

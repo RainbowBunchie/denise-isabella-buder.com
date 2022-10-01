@@ -42,7 +42,7 @@ const uniqueId = computed(
   &__label {
     display: flex;
     justify-content: space-between;
-    padding: 1em 2rem 1rem 88px;
+    padding: 1rem 2rem 1rem 88px;
     background-color: $color--secondary;
     font-weight: bold;
     cursor: pointer;
@@ -61,15 +61,18 @@ const uniqueId = computed(
     &:hover {
     }
     &::before {
-      content: '\276F';
-      width: 1em;
-      height: 1em;
+      content: '';
+      width: 1.4rem;
+      height: 0.9rem;
       text-align: center;
       position: absolute;
-      left: 44px;
+      left: 38px;
       top: 50%;
-      transform: translateY(-55%) rotate(90deg);
+      transform: translateY(-55%) rotate(180deg);
       transition: transform 0.5s ease;
+      background-image: $svg--arrow;
+      background-repeat: no-repeat;
+      background-size: contain;
       transform-origin: 50% 50%;
     }
 
@@ -103,7 +106,7 @@ const uniqueId = computed(
 .item__input:checked {
   + .item__label {
     &::before {
-      transform: translateY(-55%) rotate(-90deg);
+      transform: translateY(-55%) rotate(0deg);
     }
   }
   ~ .item__content {

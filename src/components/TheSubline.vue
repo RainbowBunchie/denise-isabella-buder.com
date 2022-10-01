@@ -25,6 +25,7 @@ const colorClass = computed(() =>
   text-align: center;
   text-transform: uppercase;
   font-style: italic;
+  margin-bottom: 2rem;
   &--dark {
     color: $color--secondary;
   }
