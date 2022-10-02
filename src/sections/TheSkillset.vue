@@ -134,6 +134,7 @@ const skills = [
     @media only screen and (min-width: $breakpoint--desktop) {
       margin-top: 7.5rem;
       flex-direction: row;
+      align-items: flex-start;
     }
     &::before {
       content: '';

@@ -11,21 +11,21 @@ const work = [
       'Rub my belly hiss. Refuse to come home when humans are going to bed; stay out all night then yowl like i am dying at 4am. Ignore the squirrels, youll never catch them anyway stretch out on bed or slap the dog because cats rule cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog. Enslave the hooman',
   },
   {
-    title: 'Frontend Developer (trainee)',
+    title: 'Frontend Developer',
     subtitle: '@ MMCAgentur',
     labelInfo: '2018-2018',
     content:
       'Rub my belly hiss. Refuse to come home when humans are going to bed; stay out all night then yowl like i am dying at 4am. Ignore the squirrels, youll never catch them anyway stretch out on bed or slap the dog because cats rule cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog. Enslave the hooman',
   },
   {
-    title: 'Graphic and web desinger (trainee)',
+    title: 'Graphic and web desinger',
     subtitle: '@ Raiffeisenbank Salzburg',
     labelInfo: '2015-2015',
     content:
       'Rub my belly hiss. Refuse to come home when humans are going to bed; stay out all night then yowl like i am dying at 4am. Ignore the squirrels, youll never catch them anyway stretch out on bed or slap the dog because cats rule cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog. Enslave the hooman',
   },
   {
-    title: 'Graphic designer (trainee)',
+    title: 'Graphic designer',
     subtitle: '@ nmc Salzburg',
     labelInfo: '2014-2014',
     content:
@@ -34,19 +34,19 @@ const work = [
 ];
 const education = [
   {
-    title: 'Master of Science in Engineering (Web Engineering)',
+    title: 'Master of Science in Engineering',
     subtitle: '@ University of Applied Sciences Salzburg',
     labelInfo: '2019-2021',
     content: 'content',
   },
   {
-    title: 'Bachelor of Science in Engineering (Web Engineering)',
+    title: 'Bachelor of Science in Engineering',
     subtitle: '@ University of Applied Sciences Salzburg',
     labelInfo: '2016-2019',
     content: 'content',
   },
   {
-    title: 'A-level (Graphic & communication design)',
+    title: 'A-level',
     subtitle: '@ HTBLuVA Salzburg',
     labelInfo: '2011-2016',
     content: 'content',

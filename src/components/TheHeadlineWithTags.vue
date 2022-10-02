@@ -59,10 +59,11 @@ const props = defineProps<Props>();
     content: '';
     width: 100vw;
     position: absolute;
-    left: calc(-50vw - 1rem);
+    left: 50%;
     top: calc(-22px);
     border-top: 6px solid $color--accent;
     z-index: 1;
+    transform: translateX(-100%);
 
     @media only screen and (min-width: $breakpoint--desktop) {
       display: none;
@@ -70,7 +71,8 @@ const props = defineProps<Props>();
   }
   &:nth-child(even) {
     &::after {
-      left: calc(50vw - 1rem);
+      left: 50%;
+      transform: none;
     }
   }
   &__headline {
