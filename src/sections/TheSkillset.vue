@@ -120,14 +120,21 @@ const skills = [
 
 .skillset {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: $color--secondary;
+  display: flex;
+  flex-direction: column;
+
   &__skills {
-    margin-top: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    flex-wrap: wrap;
+    @media only screen and (min-width: $breakpoint--desktop) {
+      margin-top: 7.5rem;
+      flex-direction: row;
+    }
     &::before {
       content: '';
       width: 100vw;
@@ -136,9 +143,11 @@ const skills = [
       top: calc(-19px);
       transform: translateX(-50%);
       border-top: 8px solid $color--accent;
+      display: none;
+      @media only screen and (min-width: $breakpoint--desktop) {
+        display: flex;
+      }
     }
-    display: flex;
-    gap: 4rem;
   }
 }
 </style>
