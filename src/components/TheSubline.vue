@@ -25,7 +25,10 @@ const colorClass = computed(() =>
   text-align: center;
   text-transform: uppercase;
   font-style: italic;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  @media only screen and (min-width: $breakpoint--tablet) {
+    margin-bottom: 2rem;
+  }
   &--dark {
     color: $color--secondary;
   }

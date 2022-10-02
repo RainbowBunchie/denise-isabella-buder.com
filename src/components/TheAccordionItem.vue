@@ -32,7 +32,7 @@ const uniqueId = computed(
 .item {
   width: 100%;
   color: white;
-  // overflow: hidden;
+  overflow: hidden;
   &__input {
     position: absolute;
     opacity: 0;
@@ -50,7 +50,7 @@ const uniqueId = computed(
     position: relative;
     border-top-left-radius: 44px;
     border-bottom-left-radius: 44px;
-    margin-top: 1.75rem;
+    margin-top: 1.5rem;
     * {
       font-size: 1.1rem;
       line-height: 1;
@@ -98,7 +98,7 @@ const uniqueId = computed(
     }
     .label__info {
       position: absolute;
-      top: -1.5rem;
+      top: -1.25rem;
       text-transform: uppercase;
       font-weight: 900;
       right: 0;

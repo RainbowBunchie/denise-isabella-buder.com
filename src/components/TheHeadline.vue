@@ -23,11 +23,15 @@ const color = computed(() => props.color);
 @import '../assets/variables.scss';
 .headline {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
+
   text-align: center;
   padding: 2rem 0;
   width: 100vw;
   overflow: hidden;
+  @media only screen and (min-width: $breakpoint--tablet) {
+    margin-bottom: 5rem;
+  }
   * {
     font-family: $font--heading;
     font-weight: 700;

@@ -109,7 +109,15 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 12rem 0 10rem;
+  padding: 5rem 0 10rem;
+
+  @media only screen and (min-width: $breakpoint--tablet) {
+    padding: 7.5rem 0 10rem;
+  }
+
+  @media only screen and (min-width: $breakpoint--desktop) {
+    padding: 12rem 0 10rem;
+  }
 }
 
 html {

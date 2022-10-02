@@ -77,6 +77,18 @@ const education = [
   align-items: center;
   min-height: 100vh;
   background-color: $color--accent;
-  padding-bottom: 15rem;
+  padding-bottom: 2.5rem;
+
+  @media only screen and (min-width: $breakpoint--tablet) {
+    padding-bottom: 5rem;
+  }
+
+  @media only screen and (min-width: $breakpoint--desktop) {
+    padding-bottom: 10rem;
+  }
+
+  @media only screen and (min-width: $breakpoint--large-desktop) {
+    padding-bottom: 15rem;
+  }
 }
 </style>
