@@ -2,6 +2,13 @@
 import { RouterLink } from 'vue-router';
 </script>
 <template>
+  <input class="nav__input" id="burger" type="checkbox" />
+  <label for="burger">
+    <div class="nav__burger burger">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span></div
+  ></label>
   <nav class="nav nav--main">
     <RouterLink
       :class="$route.fullPath.includes('#about') ? 'router-link--active' : ''"
@@ -36,13 +43,77 @@ import { RouterLink } from 'vue-router';
 <style scoped lang="scss">
 @import '../assets/variables.scss';
 
+.burger {
+  width: 35px;
+  height: 31px;
+  position: fixed;
+  top: calc(100vh - 30px - 1rem);
+  right: 1rem;
+  z-index: 50000;
+  cursor: pointer;
+  @media only screen and (min-width: $breakpoint--tablet) {
+    display: none;
+  }
+  &::before {
+    content: '';
+    background-color: $color--secondary;
+    width: 100vw;
+    height: 120px;
+    position: absolute;
+    transform-origin: bottom center;
+    bottom: -5rem;
+    right: -50vw;
+    transform: rotate(-45deg);
+  }
+  &__line {
+    height: 5px;
+    width: 35px;
+    background-color: $color--primary;
+    display: block;
+    &:first-child {
+    }
+    &:nth-child(2) {
+      margin-top: 8px;
+    }
+    &:nth-child(3) {
+      margin-top: 8px;
+    }
+  }
+}
+
+.nav__input {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: -100vw;
+  &:checked {
+    margin-left: 50px;
+    + label {
+      + .nav--main {
+        display: flex;
+      }
+    }
+  }
+}
+
 .nav--main {
   position: fixed;
-  left: 1rem;
-  top: 1rem;
   z-index: 7000;
   display: flex;
   flex-direction: column;
+  display: none;
+  right: 0;
+  bottom: calc(2rem + 31px);
+  width: 100vw;
+  background-color: $color--secondary;
+  @media only screen and (min-width: $breakpoint--tablet) {
+    display: flex;
+    width: auto;
+    left: 1rem;
+    top: 1rem;
+    background-color: transparent;
+  }
   a {
     color: $color--primary;
     font-size: 1.3rem;
