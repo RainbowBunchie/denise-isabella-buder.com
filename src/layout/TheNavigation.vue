@@ -109,9 +109,11 @@ import { RouterLink } from 'vue-router';
   background-color: $color--secondary;
   @media only screen and (min-width: $breakpoint--tablet) {
     display: flex;
-    width: auto;
+    width: unset;
     left: 1rem;
     top: 1rem;
+    right: auto;
+    bottom: auto;
     background-color: transparent;
   }
   a {
