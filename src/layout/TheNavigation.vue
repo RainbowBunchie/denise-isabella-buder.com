@@ -51,6 +51,7 @@ import { RouterLink } from 'vue-router';
   right: 1rem;
   z-index: 50000;
   cursor: pointer;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   @media only screen and (min-width: $breakpoint--tablet) {
     display: none;
   }
@@ -70,6 +71,7 @@ import { RouterLink } from 'vue-router';
     width: 35px;
     background-color: $color--primary;
     display: block;
+    transition: all 0.25s ease-in-out;
     &:first-child {
     }
     &:nth-child(2) {
@@ -90,6 +92,26 @@ import { RouterLink } from 'vue-router';
   &:checked {
     margin-left: 50px;
     + label {
+      .burger {
+        // transform: rotate(-180deg);
+      }
+      .burger__line {
+        &:first-child {
+          transform: rotate(-45deg);
+          margin-top: 12px;
+          width: 40px;
+        }
+        &:nth-child(2) {
+          transform: translateX(calc(1rem + 35px)) translateY(-12px);
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: rotate(45deg);
+          margin-top: -17px;
+          width: 40px;
+        }
+      }
+
       + .nav--main {
         display: flex;
       }
@@ -104,9 +126,24 @@ import { RouterLink } from 'vue-router';
   flex-direction: column;
   display: none;
   right: 0;
-  bottom: calc(2rem + 31px);
+  bottom: 0;
+  padding-right: 1rem;
+  padding-bottom: calc(5rem + 31px);
   width: 100vw;
-  background-color: $color--secondary;
+  gap: 1rem;
+  align-items: flex-end;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    transform-origin: bottom right;
+    transform: skew(-45deg);
+    left: -20vw;
+    bottom: 0;
+    background-color: $color--secondary;
+  }
   @media only screen and (min-width: $breakpoint--tablet) {
     display: flex;
     width: unset;
@@ -114,7 +151,12 @@ import { RouterLink } from 'vue-router';
     top: 1rem;
     right: auto;
     bottom: auto;
-    background-color: transparent;
+    align-items: flex-start;
+    gap: 0;
+
+    &::before {
+      display: none;
+    }
   }
   a {
     color: $color--primary;
