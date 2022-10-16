@@ -37,19 +37,24 @@ const education = [
     title: 'Master of Science in Engineering',
     subtitle: '@ University of Applied Sciences Salzburg',
     labelInfo: '2019-2021',
-    content: 'content',
+    content: `I attended the MultiMediaTechnology department with main focus on web engineering.
+              My master's thesis focused on emotions in e-learning applications and the impact of emotional design on the learning experience of elementary school children.
+              I graduated with a good success (1,74).`,
   },
   {
     title: 'Bachelor of Science in Engineering',
     subtitle: '@ University of Applied Sciences Salzburg',
     labelInfo: '2016-2019',
-    content: 'content',
+    content: `I attended the MultiMediaTechnology department with main focus on web development.
+              My first bachelor's thesis was about the theory on detecting depression with social media mining and the second focused on identification hrough face and speaker recognition on the web (theory and practical).
+              I graduated with a good success (1,45).`,
   },
   {
     title: 'A-level',
     subtitle: '@ HTBLuVA Salzburg',
     labelInfo: '2011-2016',
-    content: 'content',
+    content:
+      'I attended the graphic and communication design department. Besides general education the school taught how to compose print and screen designs including logos, fonts, magazines, illustrations, packagings, websites/apps, corporate designs and many more. The studies also included web development (HTML, CSS, JavaScript, CMS) advertising, photography, screen printing, media theroy and art history. I graduated with an excellent success.',
   },
 ];
 </script>

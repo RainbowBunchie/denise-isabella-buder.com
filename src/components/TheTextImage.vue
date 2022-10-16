@@ -13,16 +13,16 @@
     <div class="text-image__text">
       <h3>Hey there!</h3>
       <p>
-        I am a 26-year-old web developer with a passion for creative and exiting
-        frontends. I began my journey with development in 2015 were I learned
-        bits of HTML, CSS and JS at school and fell in love with programming. So
-        I decided to expand my skills at university where I studied web
-        development and got my Master's degree (MSc) in 2021. I learned tons of
-        programming languages, programming tools and basic coding concepts. Now
-        I work as a fulltime web developer and make computer go beep beep boop
-        professionally. I still love learning about new and modern (web)
-        technologies so I am always looking for new frameworks, tools and
-        challenges.
+        I am a web developer of 26 years with a passion for creative and
+        outgoing frontends. My programming journey began in 2015 where I learned
+        bits of HTML, CSS and JS at school and fell immediately in love with
+        coding. So I decided to expand my skills at university and I studied web
+        development and graduated with a master's degree in 2021. I've been
+        taught tons all kinds of programming languages, programming tools,
+        coding concepts and patterns. I now work fulltime as a (fullstack) web
+        developer and make computer go beep beep boop professionally. I still
+        love learning about new and modern (web) technologies so I am always
+        looking for new frameworks, tools and challenges.
       </p>
     </div>
     <img class="text-image__img" src="../assets/images/me2.png" />
