@@ -113,7 +113,8 @@ import { RouterLink } from 'vue-router';
       }
 
       + .nav--main {
-        display: flex;
+        // display: flex;
+        transform: translate(0, 0);
       }
     }
   }
@@ -124,7 +125,6 @@ import { RouterLink } from 'vue-router';
   z-index: 7000;
   display: flex;
   flex-direction: column;
-  display: none;
   right: 0;
   bottom: 0;
   padding-right: 1rem;
@@ -132,6 +132,8 @@ import { RouterLink } from 'vue-router';
   width: 100vw;
   gap: 1rem;
   align-items: flex-end;
+  transform: translate(90%, 0%);
+  transition: all 0.5s ease-in-out;
 
   &::before {
     content: '';
@@ -153,6 +155,7 @@ import { RouterLink } from 'vue-router';
     bottom: auto;
     align-items: flex-start;
     gap: 0;
+    transform: none;
 
     &::before {
       display: none;
