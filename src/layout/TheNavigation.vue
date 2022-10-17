@@ -47,7 +47,7 @@ import { RouterLink } from 'vue-router';
   width: 35px;
   height: 31px;
   position: fixed;
-  top: calc(100vh - 30px - 1rem);
+  bottom: 1rem;
   right: 1rem;
   z-index: 50000;
   cursor: pointer;
@@ -58,13 +58,13 @@ import { RouterLink } from 'vue-router';
   &::before {
     content: '';
     background-color: $color--secondary;
-    width: 100vw;
-    height: 120px;
+    width: 125px;
+    height: 125px;
     position: absolute;
     transform-origin: bottom center;
-    bottom: -5rem;
-    right: -50vw;
-    transform: rotate(-45deg);
+    bottom: -1rem;
+    right: -1rem;
+    transform: skew(-45deg);
   }
   &__line {
     height: 5px;
@@ -122,6 +122,7 @@ import { RouterLink } from 'vue-router';
 
 .nav--main {
   position: fixed;
+  display: none;
   z-index: 7000;
   display: flex;
   flex-direction: column;
@@ -134,6 +135,7 @@ import { RouterLink } from 'vue-router';
   align-items: flex-end;
   transform: translate(90%, 0%);
   transition: all 0.5s ease-in-out;
+  display: none;
 
   &::before {
     content: '';
