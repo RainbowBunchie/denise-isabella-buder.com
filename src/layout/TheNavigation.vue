@@ -169,17 +169,26 @@ import { RouterLink } from 'vue-router';
     cursor: pointer;
     text-transform: uppercase;
     position: relative;
+    transition: padding-left 0.25s ease-in-out;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: calc(50%);
+      transform: translateY(-50%) skew(-12deg);
+      width: 50px;
+      height: 4px;
+      max-width: 0;
+      background-color: $color--primary;
+      transition: max-width 0.25s ease-in-out;
+    }
     &.router-link--active {
       padding-left: calc(50px + 0.5rem);
       &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: calc(50%);
-        transform: translateY(-50%);
         width: 50px;
         height: 4px;
         background-color: $color--primary;
+        max-width: 50px;
       }
       font-style: italic;
     }

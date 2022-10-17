@@ -14,6 +14,7 @@ const link = computed(() => props.link);
     :href="link ? link : ''"
     class="hashtag"
     :class="link ? 'hashtag--clickable' : ''"
+    :title="link ? `To ${text}'s website` : ''"
   >
     {{ text }}
   </component>
@@ -32,7 +33,7 @@ const link = computed(() => props.link);
   &:hover {
     background-color: $color--primary;
     color: $color--accent;
-    cursor: help;
+    cursor: default;
   }
   &--clickable {
     &:hover {

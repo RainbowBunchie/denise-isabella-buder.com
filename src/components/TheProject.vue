@@ -112,7 +112,8 @@ const imgUrl = computed(() =>
       text-decoration: none;
       color: $color--primary;
       font-style: italic;
-      padding-left: 35px;
+      padding-left: 32px;
+      transition: all 0.25s ease-in-out;
 
       &::before {
         content: '';
@@ -122,7 +123,15 @@ const imgUrl = computed(() =>
         position: absolute;
         left: 0;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) skew(-12deg);
+        transition: all 0.25s ease-in-out;
+      }
+
+      &:hover {
+        padding-left: 65px;
+        &::before {
+          width: 55px;
+        }
       }
     }
 
