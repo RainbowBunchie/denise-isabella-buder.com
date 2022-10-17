@@ -3,7 +3,9 @@ import Header from '@/sections/TheHeader.vue';
 import About from '@/sections/TheAbout.vue';
 import Skillset from '@/sections/TheSkillset.vue';
 import Work from '@/sections/TheWork.vue';
-import TheExperience from '../sections/TheExperience.vue';
+import TheExperience from '@/sections/TheExperience.vue';
+import Contact from '@/sections/TheContact.vue';
+
 import { useRouter, useRoute } from 'vue-router';
 
 import { onMounted } from 'vue';
@@ -56,6 +58,7 @@ onMounted(() => {
     <Skillset />
     <TheExperience />
     <Work />
+    <Contact />
   </main>
 </template>
 
