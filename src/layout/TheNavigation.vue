@@ -98,7 +98,7 @@ $burger-width: 36px;
           transform: translateY($burger-height / 2) rotateZ(45deg);
         }
         &:nth-child(2) {
-          transform: translateX(calc(1rem + 35px)) translateY(-12px);
+          transform: translateX(calc(1rem + 35px));
           opacity: 0;
         }
         &:nth-child(3) {
