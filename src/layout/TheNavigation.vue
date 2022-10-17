@@ -57,17 +57,6 @@ $burger-width: 36px;
   @media only screen and (min-width: $breakpoint--tablet) {
     display: none;
   }
-  &::before {
-    content: '';
-    background-color: $color--secondary;
-    width: 125px;
-    height: 125px;
-    position: absolute;
-    transform-origin: bottom center;
-    bottom: -1rem;
-    right: -1rem;
-    transform: skew(-45deg);
-  }
   &__line {
     height: 6px;
     width: $burger-width;
@@ -109,7 +98,6 @@ $burger-width: 36px;
       }
 
       + .nav--main {
-        // display: flex;
         transform: translateX(0);
       }
     }
@@ -128,15 +116,16 @@ $burger-width: 36px;
   gap: 1rem;
   align-items: flex-end;
   transition: all 0.5s ease-in-out;
-  transform: translateX(250%);
+  transform: translateX(300%);
 
   &::before {
     content: '';
     position: absolute;
-    width: 250%;
-    height: 250%;
+    width: 400%;
+    height: 300%;
     transform: skew(-45deg);
-    right: -150%;
+    transform-origin: bottom left;
+    right: -0%;
     bottom: 0;
     background-color: $color--secondary;
   }
