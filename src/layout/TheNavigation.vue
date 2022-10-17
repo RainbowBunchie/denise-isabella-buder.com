@@ -73,7 +73,7 @@ $burger-width: 36px;
     width: $burger-width;
     background-color: $color--primary;
     display: block;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.5s ease-in-out;
     &:nth-child(2) {
       margin-top: 8px;
     }
@@ -110,7 +110,7 @@ $burger-width: 36px;
 
       + .nav--main {
         // display: flex;
-        transform: translate(0, 0);
+        transform: translateX(0);
       }
     }
   }
@@ -118,7 +118,6 @@ $burger-width: 36px;
 
 .nav--main {
   position: fixed;
-  display: none;
   z-index: 7000;
   display: flex;
   flex-direction: column;
@@ -126,21 +125,18 @@ $burger-width: 36px;
   bottom: 0;
   padding-right: 1rem;
   padding-bottom: calc(5rem + 31px);
-  width: 100vw;
   gap: 1rem;
   align-items: flex-end;
-  transform: translate(90%, 0%);
   transition: all 0.5s ease-in-out;
-  display: none;
+  transform: translateX(250%);
 
   &::before {
     content: '';
     position: absolute;
-    width: 100vw;
-    height: 100vh;
-    transform-origin: bottom right;
+    width: 250%;
+    height: 250%;
     transform: skew(-45deg);
-    left: -20vw;
+    right: -150%;
     bottom: 0;
     background-color: $color--secondary;
   }
