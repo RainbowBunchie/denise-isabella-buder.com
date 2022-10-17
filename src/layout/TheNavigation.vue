@@ -1,5 +1,16 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
+
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  // const burger = document.getElementsByClassName('burger')[0];
+  // const body = document.getElementById('app');
+  // burger.addEventListener('click', () => {
+  //   console.log('click');
+  //   body?.classList.toggle('body--overlay-active');
+  // });
+});
 </script>
 <template>
   <input class="nav__input" id="burger" type="checkbox" />
@@ -84,7 +95,7 @@ $burger-width: 36px;
       .burger__line {
         &:first-child {
           transform-origin: top center;
-          transform: translateY($burger-height / 2) rotateZ(45deg);
+          transform: translateY(calc($burger-height / 2)) rotateZ(45deg);
         }
         &:nth-child(2) {
           transform: translateX(calc(1rem + 35px));
