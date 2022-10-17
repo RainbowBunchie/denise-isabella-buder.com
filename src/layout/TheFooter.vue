@@ -35,7 +35,7 @@ import { RouterLink } from 'vue-router';
   width: 100vw;
   &__links {
     background-color: $color--primary;
-    padding: 17.5rem 0 7.5rem;
+    padding: 20rem 0 7.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
