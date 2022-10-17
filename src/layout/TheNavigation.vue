@@ -42,10 +42,12 @@ import { RouterLink } from 'vue-router';
 </template>
 <style scoped lang="scss">
 @import '../assets/variables.scss';
+$burger-height: 32px;
+$burger-width: 36px;
 
 .burger {
-  width: 35px;
-  height: 31px;
+  width: $burger-width;
+  height: $burger-height;
   position: fixed;
   bottom: 1rem;
   right: 1rem;
@@ -67,13 +69,11 @@ import { RouterLink } from 'vue-router';
     transform: skew(-45deg);
   }
   &__line {
-    height: 5px;
-    width: 35px;
+    height: 6px;
+    width: $burger-width;
     background-color: $color--primary;
     display: block;
     transition: all 0.25s ease-in-out;
-    &:first-child {
-    }
     &:nth-child(2) {
       margin-top: 8px;
     }
@@ -92,23 +92,19 @@ import { RouterLink } from 'vue-router';
   &:checked {
     margin-left: 50px;
     + label {
-      .burger {
-        // transform: rotate(-180deg);
-      }
       .burger__line {
         &:first-child {
-          transform: rotate(-45deg);
-          margin-top: 12px;
-          width: 40px;
+          transform-origin: top center;
+          transform: translateY($burger-height / 2) rotateZ(45deg);
         }
         &:nth-child(2) {
           transform: translateX(calc(1rem + 35px)) translateY(-12px);
           opacity: 0;
         }
         &:nth-child(3) {
-          transform: rotate(45deg);
-          margin-top: -17px;
-          width: 40px;
+          margin-top: 0;
+          transform-origin: bottom center;
+          transform: translateY(-100%) rotateZ(-45deg);
         }
       }
 
