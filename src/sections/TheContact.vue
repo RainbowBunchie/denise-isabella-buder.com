@@ -18,24 +18,64 @@
   min-height: 0;
   padding: 0;
   position: relative;
-  margin-top: 300px;
+
+  @media only screen and (min-width: $breakpoint--tablet) {
+    margin-top: 300px;
+  }
+
+  &__download {
+    color: $color--secondary;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    padding-left: 45px;
+    transition: padding-left 0.25s ease-in-out;
+    &::before {
+      content: '';
+      width: 40px;
+      height: 6px;
+      background-color: $color--secondary;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) skew(-12deg);
+      transition: all 0.25s ease-in-out;
+      max-width: 40px;
+    }
+    &:hover {
+      padding-left: 75px;
+      &::before {
+        width: 70px;
+        max-width: 70px;
+      }
+    }
+  }
 
   .container {
-    position: absolute;
+    position: relative;
     min-height: 0;
     background-color: $color--accent;
-    padding: 0 10rem 0 8rem;
-    height: 450px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    border-top-right-radius: 350px;
-    border-bottom-right-radius: 350px;
-    width: 100%;
     z-index: 50;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin: 0 2rem;
+    @media only screen and (min-width: $breakpoint--tablet) {
+      border-top-right-radius: 350px;
+      border-bottom-right-radius: 350px;
+      height: 450px;
+      position: absolute;
+      font-size: 2rem;
+      width: 100%;
+      padding: 0 10rem 0 8rem;
+    }
   }
 }
 </style>
