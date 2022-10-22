@@ -1,12 +1,32 @@
 <script setup lang="ts">
 import TheCharacter from '@/components/TheCharacter.vue';
+import { defineComponent } from 'vue';
+import { VueTyped } from 'vue3-typed.js';
+
+defineComponent({
+  components: {
+    VueTyped,
+  },
+});
 </script>
 
 <template>
   <section class="section section--header header">
     <TheCharacter />
     <h1 class="header__headline headline">
-      I am <span class="headline--accent">Denise</span>.
+      I am&#160;
+      <span class="headline--accent">
+        <vue-typed
+          :startDelay="1000"
+          :typeSpeed="50"
+          :backSpeed="50"
+          :backDelay="2500"
+          loop
+          smartBackspace
+          :strings="['Denise.', 'a web developer.', 'a designer.']"
+        >
+        </vue-typed>
+      </span>
     </h1>
   </section>
 </template>
@@ -23,6 +43,7 @@ import TheCharacter from '@/components/TheCharacter.vue';
   overflow-x: hidden;
   &__headline {
     color: $color--primary;
+    display: flex;
   }
   .headline--accent {
     color: $color--accent;
