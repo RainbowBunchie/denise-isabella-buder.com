@@ -65,7 +65,7 @@ $burger-width: 36px;
   z-index: 50000;
   cursor: pointer;
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  @media only screen and (min-width: $breakpoint--tablet) {
+  @media only screen and (min-width: $breakpoint--large-desktop) {
     display: none;
   }
   &__line {
@@ -140,7 +140,7 @@ $burger-width: 36px;
     bottom: 0;
     background-color: $color--secondary;
   }
-  @media only screen and (min-width: $breakpoint--tablet) {
+  @media only screen and (min-width: $breakpoint--large-desktop) {
     display: flex;
     width: unset;
     left: 1rem;
@@ -185,7 +185,7 @@ $burger-width: 36px;
         background-color: $color--primary;
       }
 
-      @media only screen and (min-width: $breakpoint--tablet) {
+      @media only screen and (min-width: $breakpoint--large-desktop) {
         padding-left: calc(50px + 0.5rem);
         &::before {
           right: auto;
