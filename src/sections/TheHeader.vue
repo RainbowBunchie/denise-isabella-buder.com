@@ -15,7 +15,7 @@ defineComponent({
     <TheCharacter />
     <h1 class="header__headline headline">
       I am&#160;
-      <span class="headline--accent">
+      <span class="headline__accent">
         <vue-typed
           :startDelay="1000"
           :typeSpeed="50"
@@ -45,7 +45,7 @@ defineComponent({
     color: $color--primary;
     display: flex;
   }
-  .headline--accent {
+  .headline__accent {
     color: $color--accent;
   }
 }
