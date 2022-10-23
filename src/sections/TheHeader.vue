@@ -41,6 +41,7 @@ defineComponent({
   align-items: center;
   min-height: 100vh;
   overflow-x: hidden;
+  padding: 0;
   &__headline {
     color: $color--primary;
     display: flex;

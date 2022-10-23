@@ -60,6 +60,32 @@
   font-family: $font--text;
 }
 
+.body--overlay-open,
+.html--overlay-open {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+html {
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100vw;
+  }
+}
+
+.html--overlay-open {
+  &::before {
+    background-color: rgba(188, 19, 48, 0.1);
+    backdrop-filter: blur(2px);
+    z-index: 70;
+    transition: all 0.25s ease-in-out;
+  }
+}
+
 body {
   min-height: 100vh;
   color: $color--text;

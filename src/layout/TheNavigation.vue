@@ -1,20 +1,15 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
 
-import { onMounted } from 'vue';
+const html = document.getElementsByTagName('html')[0];
 
-onMounted(() => {
-  // const burger = document.getElementsByClassName('burger')[0];
-  // const body = document.getElementById('app');
-  // burger.addEventListener('click', () => {
-  //   console.log('click');
-  //   body?.classList.toggle('body--overlay-active');
-  // });
-});
+function toggleOverlay() {
+  html.classList.toggle('html--overlay-open');
+}
 </script>
 <template>
   <input class="nav__input" id="burger" type="checkbox" />
-  <label for="burger">
+  <label @click="toggleOverlay" for="burger">
     <div class="nav__burger burger">
       <span class="burger__line"></span>
       <span class="burger__line"></span>
@@ -64,6 +59,7 @@ $burger-width: 36px;
   right: 1rem;
   z-index: 50000;
   cursor: pointer;
+  pointer-events: all;
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   @media only screen and (min-width: $breakpoint--large-desktop) {
     display: none;
@@ -93,6 +89,7 @@ $burger-width: 36px;
     margin-left: 50px;
     + label {
       .burger__line {
+        background-color: $color--accent;
         &:first-child {
           transform-origin: top center;
           transform: translateY(calc($burger-height / 2)) rotateZ(45deg);
@@ -118,6 +115,7 @@ $burger-width: 36px;
 .nav--main {
   position: fixed;
   z-index: 7000;
+  pointer-events: all;
   display: flex;
   flex-direction: column;
   right: 0;
