@@ -24,7 +24,6 @@ const color = computed(() => props.color);
 .headline {
   position: relative;
   margin-bottom: 2.5rem;
-
   text-align: center;
   padding: 2rem 0;
   width: 100vw;

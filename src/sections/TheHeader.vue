@@ -47,9 +47,16 @@ defineComponent({
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0.5rem 1rem 0;
+    text-align: center;
+    line-height: 1.2;
   }
   .headline__accent {
+    width: 100%;
     color: $color--accent;
+    @media only screen and (min-width: $breakpoint--tablet) {
+      width: auto;
+    }
   }
 }
 </style>
