@@ -45,6 +45,8 @@ defineComponent({
   &__headline {
     color: $color--primary;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .headline__accent {
     color: $color--accent;
