@@ -37,6 +37,11 @@ class Cursor {
       }, 250);
     }
   }
+  showCursor() {
+    if (this.cursor !== undefined) {
+      this.cursor.style.opacity = '1';
+    }
+  }
   hideCursor() {
     if (this.cursor !== undefined) {
       this.cursor.style.opacity = '0';
@@ -48,10 +53,16 @@ class Cursor {
 
 onMounted(() => {
   const cursor = new Cursor({ cursorClass: 'cursor' });
-  const header = document.getElementsByClassName('header')[0] as HTMLDivElement;
-  header?.addEventListener('mousemove', (e: MouseEvent) =>
-    cursor.moveCursor({ y: e.clientY, x: e.clientX })
-  );
+  window.addEventListener('mousemove', (e: MouseEvent) => {
+    cursor.showCursor();
+    cursor.moveCursor({ y: e.clientY, x: e.clientX });
+  });
+  document
+    .getElementsByClassName('header')[0]
+    .addEventListener('mouseleave', () => {
+      console.log('leaving...');
+      cursor.hideCursor();
+    });
 });
 
 onUnmounted(() => console.log('unmount'));

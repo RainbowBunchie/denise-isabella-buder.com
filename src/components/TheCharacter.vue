@@ -156,8 +156,8 @@ function animateFace() {
 }
 
 function addFaceAnimation() {
-  gsap.set('.ear-right', { transformOrigin: '0% 50%' });
-  gsap.set('.ear-left', { transformOrigin: '100% 50%' });
+  gsap.set('.ear--right', { transformOrigin: '0% 50%' });
+  gsap.set('.ear--left', { transformOrigin: '100% 50%' });
 
   const safeToAnimate = window.matchMedia(
     '(prefers-reduced-motion: no-preference)'
@@ -168,12 +168,35 @@ function addFaceAnimation() {
     gsap.ticker.add(animateFace);
   }
 }
+function recenterFace() {
+  gsap.to(
+    [
+      character.face,
+      character.eyes.all,
+      character.innerFace,
+      character.hairFront,
+      character.hairBack,
+      character.ear,
+      character.eyebrowLeft,
+      character.eyebrowRight,
+    ],
+    {
+      yPercent: 0,
+      xPercent: 0,
+    }
+  );
+}
 
 onMounted(() => {
   initCharacter();
   addBlinking();
   addFaceAnimation();
   window.addEventListener('resize', updateWindowSize);
+  document
+    .getElementsByClassName('header')[0]
+    .addEventListener('mouseleave', () => {
+      recenterFace();
+    });
 });
 onUnmounted(() => window.removeEventListener('mousemove', updateWindowSize));
 </script>
