@@ -195,7 +195,9 @@ onMounted(() => {
   document
     .getElementsByClassName('header')[0]
     .addEventListener('mouseleave', () => {
-      recenterFace();
+      setTimeout(() => {
+        recenterFace();
+      }, 0);
     });
 });
 onUnmounted(() => window.removeEventListener('mousemove', updateWindowSize));

@@ -60,7 +60,6 @@ onMounted(() => {
   document
     .getElementsByClassName('header')[0]
     .addEventListener('mouseleave', () => {
-      console.log('leaving...');
       cursor.hideCursor();
     });
 });
