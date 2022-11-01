@@ -54,14 +54,18 @@ class Cursor {
 onMounted(() => {
   const cursor = new Cursor({ cursorClass: 'cursor' });
   window.addEventListener('mousemove', (e: MouseEvent) => {
+    console.log(e);
     cursor.showCursor();
-    cursor.moveCursor({ y: e.clientY, x: e.clientX });
+    cursor.moveCursor({ y: e.pageY, x: e.pageX });
   });
   document
     .getElementsByClassName('header')[0]
     .addEventListener('mouseleave', () => {
       cursor.hideCursor();
     });
+  window.addEventListener('scroll', function (e) {
+    cursor.hideCursor();
+  });
 });
 
 onUnmounted(() => console.log('unmount'));
