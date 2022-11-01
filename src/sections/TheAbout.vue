@@ -16,6 +16,7 @@ import TheTextImage from '../components/TheTextImage.vue';
 @import '../assets/variables.scss';
 
 .about {
+  margin-top: calc(100vh + 78px);
   &::before {
     content: '';
     z-index: 3;
@@ -38,7 +39,6 @@ import TheTextImage from '../components/TheTextImage.vue';
       height: 156px;
     }
   }
-  margin-top: 78px;
   position: relative;
   width: 100%;
   display: flex;

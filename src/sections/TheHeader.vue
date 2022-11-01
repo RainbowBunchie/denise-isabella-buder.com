@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import TheCharacter from '@/components/TheCharacter.vue';
 import { defineComponent, onMounted, onUnmounted } from 'vue';
-import type { RouterHistory } from 'vue-router';
 import { VueTyped } from 'vue3-typed.js';
 
 defineComponent({
@@ -97,6 +96,9 @@ onUnmounted(() => console.log('unmount'));
 @import '../assets/variables.scss';
 
 .header {
+  width: 100%;
+  top: 0;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
