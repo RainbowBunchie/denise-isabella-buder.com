@@ -66,7 +66,7 @@ function initCharacter() {
 
 function addBlinking() {
   const blink = gsap.timeline({
-    repeat: 10,
+    repeat: -1,
     repeatDelay: 5,
     paused: false,
   });
