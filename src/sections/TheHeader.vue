@@ -18,6 +18,7 @@ class Cursor {
       cursorClass
     )[0] as HTMLSpanElement;
     this.cursor = cursorEl !== (null || undefined) ? cursorEl : undefined;
+    this.cursor?.classList.add('cursor--show');
   }
 
   moveCursor({ y, x }: { y: number; x: number }) {
@@ -55,7 +56,7 @@ onMounted(() => {
   window.addEventListener('mousemove', (e: MouseEvent) => {
     console.log(e);
     cursor.showCursor();
-    cursor.moveCursor({ y: e.pageY, x: e.pageX });
+    cursor.moveCursor({ y: e.clientY, x: e.clientX });
   });
   document
     .getElementsByClassName('header')[0]
@@ -104,7 +105,7 @@ onUnmounted(() => console.log('unmount'));
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 0;
   &__headline {
     color: $color--primary;
@@ -124,15 +125,21 @@ onUnmounted(() => console.log('unmount'));
   }
 
   .cursor {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 40px;
-    height: 40px;
-    background-color: $color--accent;
-    border-radius: 100%;
-    transform-origin: center center;
-    transition: transform 0.15s ease-in-out;
+    @media only screen and (min-width: $breakpoint--desktop) {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      background-color: $color--accent;
+      border-radius: 100%;
+      transform-origin: center center;
+      transition: transform 0.15s ease-in-out;
+    }
+  }
+  .cursor--show {
+    display: block;
   }
 }
 </style>
