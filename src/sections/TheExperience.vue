@@ -2,6 +2,37 @@
 import TheHeadline from '../components/TheHeadline.vue';
 import TheAccordion from '../components/TheAccordion.vue';
 import TheSubline from '../components/TheSubline.vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { onMounted } from 'vue';
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  gsap
+    .timeline({
+      paused: true,
+      scrollTrigger: {
+        trigger: '.section--experience',
+        scrub: 1,
+        start: 'top bottom',
+        end: 'bottom top',
+      },
+    })
+    .fromTo(
+      '.section--experience .headline__text',
+      { top: 100 },
+      { top: -100 },
+      0
+    )
+    .fromTo(
+      '.section--experience .headline__backdrop',
+      { top: '25%' },
+      { top: '75%' },
+      0
+    )
+    .fromTo('.section--experience .container', { top: 50 }, { top: -50 }, 0);
+});
 const work = [
   {
     title: 'Web Developer',

@@ -14,7 +14,6 @@ onMounted(() => {
       scrollTrigger: {
         trigger: '.section--skillset',
         scrub: 1,
-        markers: true,
         start: 'top bottom',
         end: 'bottom top',
       },

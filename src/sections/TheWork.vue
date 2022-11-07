@@ -1,12 +1,32 @@
 <script setup lang="ts">
 import TheHeadline from '../components/TheHeadline.vue';
 import TheProject from '../components/TheProject.vue';
-// interface Project {
-//   title: string;
-//   description: string;
-//   people: { name: string; link?: string }[];
-//   imagePosition: string;
-// }
+import { onMounted } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  gsap
+    .timeline({
+      paused: true,
+      scrollTrigger: {
+        trigger: '.section--work',
+        scrub: 1,
+        start: 'top bottom',
+        end: 'bottom top',
+      },
+    })
+    .fromTo('.section--work .headline__text', { top: 100 }, { top: -100 }, 0)
+    .fromTo(
+      '.section--work .headline__backdrop',
+      { top: '25%' },
+      { top: '75%' },
+      0
+    )
+    .fromTo('.section--work .container', { top: 100 }, { top: -100 }, 0);
+});
 
 const projects = [
   {

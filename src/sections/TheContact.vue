@@ -1,4 +1,24 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { onMounted } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  gsap
+    .timeline({
+      paused: true,
+      scrollTrigger: {
+        trigger: '.section--work',
+        scrub: 1,
+        start: '90% 50%',
+        end: 'bottom top',
+      },
+    })
+    .fromTo('.section--contact', { top: 175 }, { top: -50 }, 0);
+});
+</script>
 
 <template>
   <section class="section section--contact contact">
