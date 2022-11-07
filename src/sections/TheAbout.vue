@@ -1,6 +1,33 @@
 <script setup lang="ts">
 import TheHeadline from '../components/TheHeadline.vue';
 import TheTextImage from '../components/TheTextImage.vue';
+import { onMounted } from 'vue';
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  gsap
+    .timeline({
+      paused: true,
+      scrollTrigger: {
+        trigger: '.section--about',
+        scrub: 1,
+        start: 'top bottom',
+        end: 'bottom top',
+      },
+    })
+    .fromTo('.section--about .headline__text', { top: 100 }, { top: -100 }, 0)
+    .fromTo(
+      '.section--about .headline__backdrop',
+      { top: '25%' },
+      { top: '75%' },
+      0
+    )
+    .fromTo('.section--about .container', { top: 50 }, { top: -50 }, 0);
+});
 </script>
 
 <template>

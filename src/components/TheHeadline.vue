@@ -22,12 +22,13 @@ const color = computed(() => props.color);
 <style scoped lang="scss">
 @import '../assets/variables.scss';
 .headline {
+  z-index: 500;
   position: relative;
   margin-bottom: 2.5rem;
   text-align: center;
   padding: 2rem 0;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: visible;
   @media only screen and (min-width: $breakpoint--tablet) {
     margin-bottom: 5rem;
   }

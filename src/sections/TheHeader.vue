@@ -54,7 +54,6 @@ class Cursor {
 onMounted(() => {
   const cursor = new Cursor({ cursorClass: 'cursor' });
   window.addEventListener('mousemove', (e: MouseEvent) => {
-    console.log(e);
     cursor.showCursor();
     cursor.moveCursor({ y: e.clientY, x: e.clientX });
   });
@@ -67,8 +66,6 @@ onMounted(() => {
     cursor.hideCursor();
   });
 });
-
-onUnmounted(() => console.log('unmount'));
 </script>
 
 <template>

@@ -1,6 +1,38 @@
 <script setup lang="ts">
 import TheHeadline from '../components/TheHeadline.vue';
 import TheHeadlineWithTags from '../components/TheHeadlineWithTags.vue';
+import { onMounted } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  gsap
+    .timeline({
+      paused: true,
+      scrollTrigger: {
+        trigger: '.section--skillset',
+        scrub: 1,
+        markers: true,
+        start: 'top bottom',
+        end: 'bottom top',
+      },
+    })
+    .fromTo(
+      '.section--skillset .headline__text',
+      { top: 100 },
+      { top: -100 },
+      0
+    )
+    .fromTo(
+      '.section--skillset .headline__backdrop',
+      { top: '25%' },
+      { top: '75%' },
+      0
+    )
+    .fromTo('.section--skillset .container', { top: 50 }, { top: -50 }, 0);
+});
 
 const skills = [
   {
