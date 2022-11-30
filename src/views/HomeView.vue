@@ -6,13 +6,9 @@ import Work from '@/sections/TheWork.vue';
 import TheExperience from '@/sections/TheExperience.vue';
 import Contact from '@/sections/TheContact.vue';
 
-import { useRouter, useRoute } from 'vue-router';
-
 import { onMounted } from 'vue';
 
 let sectionObserver: any = null;
-const router = useRouter();
-const route = useRoute();
 
 function observeSections() {
   try {
@@ -34,14 +30,13 @@ function observeSections() {
 function sectionObserverHandler(entries: IntersectionObserverEntry[]) {
   for (const entry of entries) {
     if (entry.isIntersecting) {
+      const [currActive] = document.getElementsByClassName(
+        'router-link--active'
+      );
+      currActive?.classList.remove('router-link--active');
       const sectionId = entry.target.id.length > 0 ? `#${entry.target.id}` : '';
-      if (route.name !== null) {
-        router.push({
-          name: route.name,
-          hash: `${sectionId}`,
-          params: { savePosition: 'true' },
-        });
-      }
+      const [newActive] = document.querySelectorAll(`a[href='/${sectionId}']`);
+      newActive?.classList.add('router-link--active');
     }
   }
 }
