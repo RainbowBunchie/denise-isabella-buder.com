@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import TheHashtag from './TheHashtag.vue';
+import ThePhone from './ThePhone.vue';
 
 interface Props {
   title: string;
@@ -23,8 +24,9 @@ const imgUrl = computed(() =>
 
 <template>
   <div class="project">
-    <div class="project__img img">
-      <img :src="imgUrl" />
+    <div class="project__img">
+      <!-- <img :src="imgUrl" /> -->
+      <ThePhone :uId="props.title" />
     </div>
     <div class="project__info info">
       <h3>{{ props.title }}</h3>

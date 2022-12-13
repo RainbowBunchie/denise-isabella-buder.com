@@ -19,6 +19,8 @@
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "gsap": "^3.10.4",
+    "lil-gui": "^0.17.0",
+    "three": "^0.147.0",
     "vue": "^3.2.37",
     "vue-router": "^4.1.2",
     "vue3-typed.js": "^1.0.0-pre"
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
     "@types/node": "^16.11.45",
+    "@types/three": "^0.146.0",
     "@vitejs/plugin-vue": "^3.0.1",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",

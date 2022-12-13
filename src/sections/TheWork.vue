@@ -166,6 +166,12 @@ const projects = [
   align-items: center;
   min-height: 100vh;
   background-color: $color--secondary;
+  padding-bottom: 25vh;
+
+  @media only screen and (min-width: $breakpoint--tablet) {
+    padding-bottom: 10rem;
+  }
+
   &::before {
     content: '';
     width: 450vw;

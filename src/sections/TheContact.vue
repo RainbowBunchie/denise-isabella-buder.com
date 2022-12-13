@@ -37,10 +37,16 @@ onMounted(() => {
 .contact {
   min-height: 0;
   padding: 0;
+  height: 0;
   position: relative;
+  background-color: $color--secondary;
 
   @media only screen and (min-width: $breakpoint--tablet) {
-    margin-top: 300px;
+    height: auto;
+  }
+
+  .container {
+    position: absolute;
   }
 
   &__download {
