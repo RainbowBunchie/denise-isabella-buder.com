@@ -25,7 +25,6 @@ const imgUrl = computed(() =>
 <template>
   <div class="project">
     <div class="project__img">
-      <!-- <img :src="imgUrl" /> -->
       <ThePhone :uId="props.title" />
     </div>
     <div class="project__info info">

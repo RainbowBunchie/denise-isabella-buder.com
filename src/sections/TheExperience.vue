@@ -36,31 +36,31 @@ onMounted(() => {
 const work = [
   {
     title: 'Web Developer',
-    subtitle: '@ Nolimits Digital Business GmbH',
+    subtitle: '@Nolimits Digital Business GmbH',
     labelInfo: '2021-now',
     content:
-      'Rub my belly hiss. Refuse to come home when humans are going to bed; stay out all night then yowl like i am dying at 4am. Ignore the squirrels, youll never catch them anyway stretch out on bed or slap the dog because cats rule cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog. Enslave the hooman',
+      'Fullstack developer with focus on frontend development, implementation and support of new and existing projects in the area of e-commerce, server infrastructure, creation of development environments, CI/CD , performing code reviews, assisting with design tasks',
   },
   {
     title: 'Frontend Developer',
     subtitle: '@ MMCAgentur',
     labelInfo: '2018-2018',
     content:
-      'Rub my belly hiss. Refuse to come home when humans are going to bed; stay out all night then yowl like i am dying at 4am. Ignore the squirrels, youll never catch them anyway stretch out on bed or slap the dog because cats rule cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog. Enslave the hooman',
+      'Implementation and support of the frontend of existing and new customer projects',
   },
   {
     title: 'Graphic and web desinger',
     subtitle: '@ Raiffeisenbank Salzburg',
     labelInfo: '2015-2015',
     content:
-      'Rub my belly hiss. Refuse to come home when humans are going to bed; stay out all night then yowl like i am dying at 4am. Ignore the squirrels, youll never catch them anyway stretch out on bed or slap the dog because cats rule cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog. Enslave the hooman',
+      'Graphic design of various print products such as flyers, posters and booklets, creation of illustrations, administration of the internal CMS for various internal websites',
   },
   {
     title: 'Graphic designer',
     subtitle: '@ nmc Salzburg',
     labelInfo: '2014-2014',
     content:
-      'Rub my belly hiss. Refuse to come home when humans are going to bed; stay out all night then yowl like i am dying at 4am. Ignore the squirrels, youll never catch them anyway stretch out on bed or slap the dog because cats rule cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog. Enslave the hooman',
+      'Graphic design of various print products such as flyers, posters and stickers',
   },
 ];
 const education = [
@@ -68,24 +68,26 @@ const education = [
     title: 'Master of Science in Engineering',
     subtitle: '@ University of Applied Sciences Salzburg',
     labelInfo: '2019-2021',
-    content: `I attended the MultiMediaTechnology department with main focus on web engineering.
-              My master's thesis focused on emotions in e-learning applications and the impact of emotional design on the learning experience of elementary school children.
-              I graduated with a good success (1,74).`,
+    content: `<b>Degree programme:</b> MultiMediaTechnology with specialisation in web engineering <br>
+              <b>Master thesis:</b> "Emotions in e-learning applications: The effects of emotional design on the learning experience of primary school children" <br>
+              <b>Final grade:</b> good success (overall grade of 1.75) <br>
+              <b>Extra-curricular activities:</b> deputy class representative, organization and moderation of <a href="lude.cat">lude.cat</a>`,
   },
   {
     title: 'Bachelor of Science in Engineering',
     subtitle: '@ University of Applied Sciences Salzburg',
     labelInfo: '2016-2019',
-    content: `I attended the MultiMediaTechnology department with main focus on web development.
-              My first bachelor's thesis was about the theory on detecting depression with social media mining and the second focused on identification hrough face and speaker recognition on the web (theory and practical).
-              I graduated with a good success (1,45).`,
+    content: `<b>Degree programme:</b> MultiMediaTechnology with specialisation in web development <br>
+              <b>Bachelor thesis 1:</b> "Detecting depression with the help of social media mining". <br>
+              <b>Bachelor thesis 2:</b> "Identification on the web by face and speaker recognition". <br>
+              <b>Final grade:</b> good success (overall grade of 1.45)`,
   },
   {
     title: 'A-level',
     subtitle: '@ HTBLuVA Salzburg',
     labelInfo: '2011-2016',
-    content:
-      'I attended the graphic and communication design department. Besides general education the school taught how to compose print and screen designs including logos, fonts, magazines, illustrations, packagings, websites/apps, corporate designs and many more. The studies also included web development (HTML, CSS, JavaScript, CMS) advertising, photography, screen printing, media theroy and art history. I graduated with an excellent success.',
+    content: `<b>Focus:</b> Graphic and communication design
+              <b>Final grade:</b> excellent success`,
   },
 ];
 </script>
