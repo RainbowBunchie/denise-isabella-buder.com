@@ -25,7 +25,7 @@ const imgUrl = computed(() =>
 <template>
   <div class="project">
     <div class="project__img">
-      <ThePhone :uId="props.title" />
+      <!-- <ThePhone :uId="props.title" /> -->
     </div>
     <div class="project__info info">
       <h3>{{ props.title }}</h3>
