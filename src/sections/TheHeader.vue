@@ -11,6 +11,7 @@ defineComponent({
 
 class Cursor {
   cursor?: HTMLSpanElement = undefined;
+  showing = false;
   prevMousePos = [];
   timeout?: ReturnType<typeof setTimeout>;
   constructor({ cursorClass }: { cursorClass: string }) {
@@ -18,7 +19,6 @@ class Cursor {
       cursorClass
     )[0] as HTMLSpanElement;
     this.cursor = cursorEl !== (null || undefined) ? cursorEl : undefined;
-    this.cursor?.classList.add('cursor--show');
   }
 
   moveCursor({ y, x }: { y: number; x: number }) {
@@ -54,6 +54,9 @@ class Cursor {
 onMounted(() => {
   const cursor = new Cursor({ cursorClass: 'cursor' });
   window.addEventListener('mousemove', (e: MouseEvent) => {
+    if (!cursor.showing && cursor?.cursor !== undefined) {
+      cursor?.cursor?.classList.add('cursor--show');
+    }
     cursor.showCursor();
     cursor.moveCursor({ y: e.clientY, x: e.clientX });
   });
