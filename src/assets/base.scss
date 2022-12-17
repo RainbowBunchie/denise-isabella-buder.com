@@ -128,6 +128,7 @@ h3 * {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 75vh;
 }
 
 p,
@@ -163,4 +164,20 @@ html {
 
 body {
   overflow: hidden;
+}
+
+.text {
+  h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $color--text;
+    transition: 0.25s color ease;
+    &:hover {
+      color: $color--accent;
+    }
+  }
 }

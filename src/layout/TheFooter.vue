@@ -1,8 +1,16 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
+import { computed } from 'vue';
+
+interface Props {
+  padded?: boolean;
+}
+
+const props = defineProps<Props>();
+const paddingClass = computed(() => (props.padded ? 'footer--padded' : ''));
 </script>
 <template>
-  <nav class="nav nav--footer footer">
+  <nav class="nav nav--footer footer" :class="paddingClass">
     <div class="footer__links">
       <div class="links__socials socials">
         <a
@@ -35,7 +43,7 @@ import { RouterLink } from 'vue-router';
   width: 100vw;
   &__links {
     background-color: $color--primary;
-    padding: 20rem 0 7.5rem;
+    padding: 7.5rem 0 7.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -82,6 +90,12 @@ import { RouterLink } from 'vue-router';
     text-align: center;
     color: $color--primary;
     font-weight: 900;
+  }
+
+  &--padded {
+    .footer__links {
+      padding: 20rem 0 7.5rem;
+    }
   }
 }
 </style>

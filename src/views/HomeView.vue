@@ -5,6 +5,8 @@ import Skillset from '@/sections/TheSkillset.vue';
 import Work from '@/sections/TheWork.vue';
 import TheExperience from '@/sections/TheExperience.vue';
 import Contact from '@/sections/TheContact.vue';
+import Navigation from '../layout/TheNavigation.vue';
+import Footer from '../layout/TheFooter.vue';
 
 import { onMounted } from 'vue';
 
@@ -47,6 +49,9 @@ onMounted(() => {
 </script>
 
 <template>
+  <header>
+    <Navigation />
+  </header>
   <main>
     <Header />
     <About />
@@ -55,6 +60,7 @@ onMounted(() => {
     <Work />
     <Contact />
   </main>
+  <Footer padded />
 </template>
 
 <style scoped>

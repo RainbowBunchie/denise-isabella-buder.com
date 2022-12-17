@@ -46,7 +46,7 @@ function toggleOverlay() {
     >
   </nav>
 </template>
-<style scoped lang="scss">
+<style lang="scss">
 @import '../assets/variables.scss';
 $burger-height: 32px;
 $burger-width: 36px;
