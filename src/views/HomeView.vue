@@ -39,6 +39,12 @@ function sectionObserverHandler(entries: IntersectionObserverEntry[]) {
       const sectionId = entry.target.id.length > 0 ? `#${entry.target.id}` : '';
       const [newActive] = document.querySelectorAll(`a[href='/${sectionId}']`);
       newActive?.classList.add('router-link--active');
+    } else if (entry.target.classList.contains('about')) {
+      // special case due to header being fixed and not intersecting
+      const [currActive] = document.getElementsByClassName(
+        'router-link--active'
+      );
+      currActive?.classList.remove('router-link--active');
     }
   }
 }
