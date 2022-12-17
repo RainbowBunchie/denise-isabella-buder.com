@@ -11,18 +11,18 @@
 <template>
   <div class="text-image">
     <div class="text-image__text">
-      <h3>Hey there!</h3>
+      <h3>Heyjo!</h3>
       <p>
-        I am a web developer of 26 years with a passion for creative and
-        outgoing frontends. My programming journey began in 2015 where I learned
-        bits of HTML, CSS and JS at school and fell immediately in love with
-        coding. So I decided to expand my skills at university and I studied web
-        development and graduated with a master's degree in 2021. I've been
-        taught tons all kinds of programming languages, programming tools,
-        coding concepts and patterns. I now work fulltime as a (fullstack) web
-        developer and make computer go beep beep boop professionally. I still
-        love learning about new and modern (web) technologies so I am always
-        looking for new frameworks, tools and challenges.
+        Ich bin Denise und ich bin Webentwicklerin und -designerin mit Standort
+        in Salzburg, Österreich. Meine Reise in die Webentwicklung begann 2015
+        als mir in der Schule die Basics von HTML, CSS und JavaScript
+        beigebracht wurden und ich so meine Liebe für die Programmierung
+        entdeckten konnte. Nun, Jahre später, mit einem Masterabschluss in
+        MultiMediaTechnology (Web Engineering), arbeite ich als
+        (Fullstack-)Webentwicklerin, mit derzeitigem Fokus auf Frontend. Ich
+        probiere mich gerne an neuen und innovtiven Technologien/Trends und bin
+        daher immer auf der Suche nach neuen Frameworks, Tools und
+        Herausforderungen.
       </p>
     </div>
     <img class="text-image__img" src="../assets/images/me2.png" />

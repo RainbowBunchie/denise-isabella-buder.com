@@ -76,7 +76,7 @@ onMounted(() => {
     <span class="header__cursor cursor"></span>
     <TheCharacter />
     <h1 class="header__headline headline">
-      I am&#160;
+      Hi, ich bin&#160;
       <span class="headline__accent">
         <vue-typed
           :startDelay="1000"
@@ -85,7 +85,7 @@ onMounted(() => {
           :backDelay="2500"
           loop
           smartBackspace
-          :strings="['Denise.', 'a web developer.', 'a designer.']"
+          :strings="['Denise.', 'Web-Entwicklerin.', 'Web-Designerin.']"
         >
         </vue-typed>
       </span>

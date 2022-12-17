@@ -21,9 +21,9 @@ import { RouterLink } from 'vue-router';
         </a>
       </div>
       <RouterLink class="links__link link" to="/data-policy"
-        >Data Policy</RouterLink
+        >Datenschutz</RouterLink
       >
-      <RouterLink class="links__link link" to="/imprint">Imprint</RouterLink>
+      <RouterLink class="links__link link" to="/imprint">Impressum</RouterLink>
     </div>
     <div class="footer__copyright">© 2022 Denise Buder</div>
   </nav>

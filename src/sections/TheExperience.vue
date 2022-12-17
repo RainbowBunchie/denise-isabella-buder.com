@@ -35,70 +35,70 @@ onMounted(() => {
 });
 const work = [
   {
-    title: 'Web Developer',
+    title: 'Web-Entwicklerin',
     subtitle: '@Nolimits Digital Business GmbH',
     labelInfo: '2021-now',
     content:
-      'Fullstack developer with focus on frontend development, implementation and support of new and existing projects in the area of e-commerce, server infrastructure, creation of development environments, CI/CD , performing code reviews, assisting with design tasks',
+      'Fullstack-Entwicklerin mit Fokus auf Frontend, Umsetzung und Betreuung von neuen und bestehenden Projekten mit Schwerpunkt E-Commerce, Server-Infrastruktur, Erstellung von Entwicklungsumgebungen, CI/CD , Durchführen von Code Reviews, Aushilfe bei Design-Aufgaben',
   },
   {
-    title: 'Frontend Developer',
-    subtitle: '@ MMCAgentur',
+    title: 'Frontend-Entwicklerin (Praktikantin)',
+    subtitle: '@MMCAgenturfür digitale Kommunikation GmbH',
     labelInfo: '2018-2018',
     content:
-      'Implementation and support of the frontend of existing and new customer projects',
+      'Umsetzung und Betreuung des Frontends von bestehenden und neuen Kundenprojekten',
   },
   {
-    title: 'Graphic and web desinger',
-    subtitle: '@ Raiffeisenbank Salzburg',
+    title: 'Grafik- und Webdesignerin (Praktikantin)',
+    subtitle: '@Raiffeisenbank Salzburg',
     labelInfo: '2015-2015',
     content:
-      'Graphic design of various print products such as flyers, posters and booklets, creation of illustrations, administration of the internal CMS for various internal websites',
+      'Grafische Gestaltung von diversen Printprodukten wie Flyer, Plakate und Booklets, Verwaltung des internen CMS für diverse interne Websites',
   },
   {
-    title: 'Graphic designer',
-    subtitle: '@ nmc Salzburg',
+    title: 'Grafikdesignerin (Praktikantin)',
+    subtitle: '@nmc Salzburg',
     labelInfo: '2014-2014',
     content:
-      'Graphic design of various print products such as flyers, posters and stickers',
+      'Grafische Gestaltung von diversen Printprodukten wie Flyer, Plakate und Sticker',
   },
 ];
 const education = [
   {
     title: 'Master of Science in Engineering',
-    subtitle: '@ University of Applied Sciences Salzburg',
+    subtitle: '@Fachhochschule Salzburg',
     labelInfo: '2019-2021',
-    content: `<b>Degree programme:</b> MultiMediaTechnology with specialisation in web engineering <br>
-              <b>Master thesis:</b> "Emotions in e-learning applications: The effects of emotional design on the learning experience of primary school children" <br>
-              <b>Final grade:</b> good success (overall grade of 1.75) <br>
-              <b>Extra-curricular activities:</b> deputy class representative, organization and moderation of <a href="lude.cat">lude.cat</a>`,
+    content: `<b>Studiengang:</b>  MultiMediaTechnology mit Spezialisierung in Web Engineering<br>
+              <b>Masterarbeit:</b> “Emotionen in E-Learning-Applikationen: Die Auswirkungen von emotionalem Design auf das Lernerlebnis von Volksschulkindern” <br>
+              <b>Abschluss:</b> guter Erfolg mit Gesamtbeurteilung von 1,75 <br>
+              <b>Aussercurriculare Aktivitäten:</b> stellvertretende Jahrgangssprechring, Mitorganisation und Co-Moderation der <a href="lude.cat">lude.cat</a>`,
   },
   {
     title: 'Bachelor of Science in Engineering',
-    subtitle: '@ University of Applied Sciences Salzburg',
+    subtitle: '@Fachhochschule Salzburg',
     labelInfo: '2016-2019',
-    content: `<b>Degree programme:</b> MultiMediaTechnology with specialisation in web development <br>
-              <b>Bachelor thesis 1:</b> "Detecting depression with the help of social media mining". <br>
-              <b>Bachelor thesis 2:</b> "Identification on the web by face and speaker recognition". <br>
-              <b>Final grade:</b> good success (overall grade of 1.45)`,
+    content: `<b>Studiengang:</b> MultiMediaTechnology mit Spezialisierung in Web Development <br>
+              <b>Bachelorarbeit 1:</b> “Erkennen von Depression mit Hilfe von Social Media Mining” <br>
+              <b>Bachelorarbeit 2:</b> "Identifizierung im Web durch Gesichts- und Sprechererkennung" <br>
+              <b>Abschluss:</b> guter Erfolg mit einer Gesamtbeurteilung von 1,45`,
   },
   {
-    title: 'A-level',
-    subtitle: '@ HTBLuVA Salzburg',
+    title: 'Matura',
+    subtitle: '@HTBLuVA Salzburg',
     labelInfo: '2011-2016',
-    content: `<b>Focus:</b> Graphic and communication design
-              <b>Final grade:</b> excellent success`,
+    content: `<b>Schwerpunkt:</b> Grafik- und Kommunikationsdesign
+              <b>Abschluss:</b> ausgezeichneter Erfolg`,
   },
 ];
 </script>
 
 <template>
   <section class="section section--experience experience" id="experience">
-    <TheHeadline color="#2a2726" text="Experience" />
+    <TheHeadline color="#2a2726" text="Erfahrung" />
     <div class="container">
-      <TheSubline text="Work" color="dark"></TheSubline>
+      <TheSubline text="Beruf" color="dark"></TheSubline>
       <TheAccordion :items="work" />
-      <TheSubline text="Education" color="dark"></TheSubline>
+      <TheSubline text="Ausbildung" color="dark"></TheSubline>
       <TheAccordion :items="education" />
     </div>
   </section>

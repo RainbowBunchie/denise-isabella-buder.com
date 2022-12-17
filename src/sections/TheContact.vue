@@ -23,10 +23,9 @@ onMounted(() => {
 <template>
   <section class="section section--contact contact">
     <div class="container">
-      If you have any questions or just want to say hello, feel free to contact
-      me via my socials below or send me an email! I’ll be happy to hear from
-      you. For further information about me you can also download my CV here.
-      <a class="contact__download" download href="."> Download resume </a>
+      Hast du Fragen, Anregungen oder willst einfach nur Hallo sagen? Dann melde
+      dich gerne via meinen sozialen Netzwerken oder via E-Mail. <br />
+      Ich freue mich auf deine Nachricht!
     </div>
   </section>
 </template>

@@ -35,7 +35,7 @@ onMounted(() => {
 
 const skills = [
   {
-    headline: 'Languages',
+    headline: 'Sprachen',
     tags: [
       {
         text: 'HTML',
@@ -58,32 +58,21 @@ const skills = [
       {
         text: 'SQL',
       },
-      {
-        text: 'Java',
-      },
-      {
-        text: 'C#',
-      },
-      {
-        text: 'Ruby',
-      },
     ],
   },
   {
     headline: 'Frameworks & Tools',
     tags: [
       {
+        text: 'Vue.js',
+      },
+      {
         text: 'React',
       },
       {
         text: 'React Native',
       },
-      {
-        text: 'Redux',
-      },
-      {
-        text: 'Vue.js',
-      },
+
       {
         text: 'Node.js',
       },
@@ -94,16 +83,10 @@ const skills = [
         text: 'GitHub Actions',
       },
       {
-        text: 'jest',
-      },
-      {
         text: 'Docker',
       },
       {
         text: 'Shopware 5 & 6',
-      },
-      {
-        text: 'Express',
       },
     ],
   },

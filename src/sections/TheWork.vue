@@ -32,8 +32,7 @@ const projects = [
   {
     title: 'Turtlet',
     image: 'iphine.png',
-    description:
-      '… is a slow media messaging web and app that counters the fast moving zeitgeist of our digital society by giving more emotional value and individualism to its messages (so called ”Turtlets”). Similar to a letter or postcard, Turtlets can only be sent to one person at a time and take a certain amount of time to reach the recipient. ',
+    description: `... ist ein entschleunigender Messaging-Dienst für Web und Smartphones, der dem schnelllebigen Zeitgeist unserer digitalen Gesellschaft entgegenwirkt, indem die gesendeten Nachrichten (so genannten "Turtlets") mehr emotionalen Wert und Individualität verliehen wird. Ähnlich wie bei einem Brief oder einer Postkarte können Turtlets jeweils nur an eine Person gesendet werden und benötigen eine gewisse Zeit, um den Empfänger zu erreichen.`,
     technologies: ['React Native', 'JavaScript', 'Redux'],
     links: [
       {
@@ -62,8 +61,10 @@ const projects = [
   {
     title: 'SOUL COLLECTORS',
     image: 'iphone2.png',
-    description:
-      '…is a local browser multiplayer game. The players have a shared screen in the browser window and use their smartphones as gamepads. In Soul Collectors the players play against each other! When a player gets eliminated a soul appears over the dead body of the player. Now the other players goal is to collect that soul and bring it back to their own base. If a player manages to collect a soul of every enemy player then he wins the round.',
+    description: `...ist ein lokales FFA-Browser-Multiplayer-Spiel, in welchem das eigene Smartphone als Gamepad genutzt wird. 
+    Wenn ein Spieler eliminiert wird, erscheint eine Seele über dem toten Körper des Spielers. Das Ziel der anderen Spieler ist 
+    es nun, diese Seele einzusammeln und zu ihrer eigenen Basis zurückzubringen. Wenn es einem Spieler gelingt, die Seelen aller 
+    gegnerischen Spieler einzusammeln, gewinnt er die Runde.`,
     technologies: ['JavaScript', 'AirConsole', 'Phaser.js'],
     links: [
       {
@@ -88,9 +89,12 @@ const projects = [
   {
     title: 'Help(u)help',
     image: 'iphine.png',
-    description:
-      '…is a tool designed to help social workers organize different tasks for volunteers. Admins can create tasks which will be shown to the registered social workers. These social workers now have the possibility to view these tasks and apply for them. After the application an admin has choose one one of the wokers. This project has a webpage and an Android app.',
-    technologies: ['Ruby on rails', 'Java'],
+    description: `...ist ein Tool, welches Sozialarbeitern dabei hilft, verschiedene Aufgaben für Freiwillige zu organisieren. 
+    Administratoren können Aufgaben erstellen, die den registrierten Freiwilligen angezeigt werden. 
+    Diese haben nun die Möglichkeit, diese Aufgaben einzusehen und sich für sie zu bewerben. 
+    Nach der Bewerbung wählt der Administrator einen der Freiwilligen aus und weist die Aufgabe zu.
+   `,
+    technologies: ['Web', 'Android App', 'Ruby on rails', 'Java'],
     links: [
       {
         text: 'view code',
@@ -109,8 +113,10 @@ const projects = [
   {
     title: 'Cat Curling',
     image: 'iphone2.png',
-    description:
-      '…is a web game where you do curling in the living room with cats! The player only has a certain amount of shots to get the cat into the goal and get the best score possible. The game consists of five levels with increasing difficulty.',
+    description: `...ist ein Browser-Spiel, bei dem man in einem Wohnzimmer mit Katzen Curling spielt! 
+    Der Spieler hat nur eine bestimmte Anzahl von Schüssen, um die Katze ins Ziel zu bringen und die bestmögliche Punktzahl zu erreichen. 
+    Das Spiel besteht aus fünf Levels mit steigendem Schwierigkeitsgraden.
+   `,
     technologies: ['JavaScript', 'Phaser.js', 'Firebase'],
     links: [
       {
@@ -137,7 +143,7 @@ const projects = [
 <template>
   <section class="section section--work work" id="work">
     <div class="container">
-      <TheHeadline color="rgb(188, 19, 48)" text="Projects" />
+      <TheHeadline color="rgb(188, 19, 48)" text="Projekte" />
       <TheProject
         v-for="(project, index) in projects"
         :title="project.title"

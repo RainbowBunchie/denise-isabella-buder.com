@@ -20,7 +20,7 @@ function toggleOverlay() {
       :class="$route.fullPath.includes('#about') ? 'router-link--active' : ''"
       :to="{ name: 'home', hash: '#about' }"
       exact
-      >About</RouterLink
+      >Über mich</RouterLink
     >
     <RouterLink
       :class="
@@ -36,13 +36,13 @@ function toggleOverlay() {
       "
       exact
       :to="{ name: 'home', hash: '#experience' }"
-      >Experience</RouterLink
+      >Erfahrung</RouterLink
     >
     <RouterLink
       :class="$route.fullPath.includes('#work') ? 'router-link--active' : ''"
       :to="{ name: 'home', hash: '#work' }"
       exact
-      >Projects</RouterLink
+      >Projekte</RouterLink
     >
   </nav>
 </template>
