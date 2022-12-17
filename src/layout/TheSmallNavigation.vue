@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router';
 </script>
 <template>
   <nav class="nav nav--small">
-    <RouterLink :to="{ name: 'home' }" exact>Zurück zur Startseite</RouterLink>
+    <RouterLink :to="{ name: 'home' }" exact>Zur Startseite</RouterLink>
   </nav>
 </template>
 <style scoped lang="scss">
@@ -23,7 +23,10 @@ import { RouterLink } from 'vue-router';
     cursor: pointer;
     text-transform: uppercase;
     position: relative;
-    transition: padding-left 0.25s ease-in-out;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
 </style>
