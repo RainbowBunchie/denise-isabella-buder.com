@@ -108,7 +108,7 @@ onMounted(() => {
   padding: 0 !important;
   &.section {
     @media only screen and (max-width: $breakpoint--mobile) {
-      padding: 20vh 0 2rem !important;
+      padding: 15vh 0 2rem !important;
       justify-content: flex-start;
     }
   }
