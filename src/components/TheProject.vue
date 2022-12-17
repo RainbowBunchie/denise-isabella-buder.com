@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import TheHashtag from './TheHashtag.vue';
-import ThePhone from './ThePhone.vue';
 
 interface Props {
   title: string;
@@ -10,22 +9,26 @@ interface Props {
   technologies?: string[];
   people: { name: string; link?: string }[];
   links?: { text: string; url?: string }[];
-  image: string;
+  video: string;
 }
 
 const props = defineProps<Props>();
 const flexDirection = computed(() =>
   props.imagePosition == 'right' ? 'row-reverse' : 'row'
 );
-const imgUrl = computed(() =>
-  new URL(`../assets/images/${props.image}`, import.meta.url).toString()
+const videoUrl = computed(() =>
+  new URL(`../assets/videos/${props.video}`, import.meta.url).toString()
 );
 </script>
 
 <template>
   <div class="project">
     <div class="project__img">
-      <!-- <ThePhone :uId="props.title" /> -->
+      <video :src="videoUrl" autoplay muted loop>
+        Ihr Browser kann dieses Video nicht wiedergeben.<br />
+        Dieser Film zeigt eine Demonstration des video-Elements. Sie können ihn
+        unter <a :href="videoUrl">Link-Addresse</a> abrufen.
+      </video>
     </div>
     <div class="project__info info">
       <h3>{{ props.title }}</h3>
@@ -79,6 +82,11 @@ const imgUrl = computed(() =>
     display: flex;
     justify-content: center;
     align-items: center;
+
+    video {
+      width: 350px;
+      height: auto;
+    }
     &::before {
       content: '';
       position: absolute;

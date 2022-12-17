@@ -92,7 +92,6 @@ body {
   background: $color--secondary;
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
-  font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -132,7 +131,14 @@ h3 * {
 
 p,
 * {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  @media only screen and (min-width: $breakpoint--mobile) {
+    font-size: 1.15rem;
+  }
+
+  @media only screen and (min-width: $breakpoint--tablet) {
+    font-size: 1.2rem;
+  }
 }
 
 b {
