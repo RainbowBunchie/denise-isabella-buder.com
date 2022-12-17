@@ -451,16 +451,24 @@ onUnmounted(() => window.removeEventListener('mousemove', updateWindowSize));
   background-color: $color--primary;
   border-radius: 2rem;
   padding: 2rem 2rem 0rem 2rem;
-  width: calc(50vh + 4rem);
-  height: calc(50vh + 4rem);
+  width: calc(100vw - 2rem);
+  height: calc(100vw - 2rem);
   display: flex;
   justify-content: center;
   align-items: flex-end;
   border-radius: 100%;
   overflow: hidden;
 
+  @media only screen and (min-width: $breakpoint--tablet) {
+    width: calc(50vh + 4rem);
+    height: calc(50vh + 4rem);
+  }
+
   svg {
     overflow: visible;
+    width: 100%;
+    height: 100%;
+    margin-bottom: -0.75rem;
   }
 }
 </style>

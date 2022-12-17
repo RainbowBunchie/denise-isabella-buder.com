@@ -93,7 +93,7 @@ onMounted(() => {
   </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import '../assets/variables.scss';
 
 .header {
@@ -102,11 +102,17 @@ onMounted(() => {
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
-  padding: 0;
+  padding: 0 !important;
+  &.section {
+    @media only screen and (max-width: $breakpoint--mobile) {
+      padding: 20vh 0 2rem !important;
+      justify-content: flex-start;
+    }
+  }
+
   &__headline {
     color: $color--primary;
     display: flex;
@@ -115,11 +121,22 @@ onMounted(() => {
     margin: 0.5rem 1rem 0;
     text-align: center;
     line-height: 1.2;
+
+    @media only screen and (max-width: $breakpoint--mobile) {
+      font-size: 1.8rem;
+      text-align: center;
+      width: 100%;
+
+      * {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    }
   }
   .headline__accent {
     width: 100%;
     color: $color--accent;
-    @media only screen and (min-width: $breakpoint--tablet) {
+    @media only screen and (min-width: $breakpoint--desktop) {
       width: auto;
     }
   }
