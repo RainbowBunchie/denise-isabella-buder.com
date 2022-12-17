@@ -161,7 +161,10 @@ $burger-width: 36px;
     cursor: pointer;
     text-transform: uppercase;
     position: relative;
-    transition: padding-left 0.25s ease-in-out;
+    transition: padding-left 0.25s ease-in-out, opacity 0.5s ease;
+    &:hover {
+      opacity: 0.6;
+    }
     &::before {
       content: '';
       position: absolute;
