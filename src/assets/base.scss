@@ -132,8 +132,6 @@ h3 * {
 p,
 * {
   font-size: 1.05rem;
-  hyphens: auto;
-  color: $color--text;
 
   @media only screen and (min-width: $breakpoint--mobile) {
     font-size: 1.15rem;
@@ -151,6 +149,11 @@ p,
       color: $color--accent;
     }
   }
+}
+
+p {
+  color: $color--text;
+  hyphens: auto;
 }
 
 b {
