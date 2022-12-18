@@ -119,9 +119,9 @@ h3 * {
 }
 
 .container {
-  max-width: $contaienr--large-desktop;
+  width: calc(100vw - 2 * 190px);
   padding: 0 1rem;
-  width: 100%;
+  max-width: 1500px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -134,13 +134,13 @@ p,
   font-size: 1.05rem;
 
   @media only screen and (min-width: $breakpoint--mobile) {
-    font-size: 1.15rem;
+    font-size: 1.125rem;
   }
+}
 
-  @media only screen and (min-width: $breakpoint--tablet) {
-    font-size: 1.2rem;
-  }
-
+p {
+  color: $color--text;
+  hyphens: auto;
   a {
     text-decoration: underline;
     color: $color--text;
@@ -149,11 +149,6 @@ p,
       color: $color--accent;
     }
   }
-}
-
-p {
-  color: $color--text;
-  hyphens: auto;
 }
 
 b {

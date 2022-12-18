@@ -37,7 +37,7 @@ const work = [
   {
     title: 'Web-Entwicklerin',
     subtitle: '@Nolimits Digital Business GmbH',
-    labelInfo: '2021-now',
+    labelInfo: '2021-heute',
     content:
       '<b>Fullstack-Entwicklerin mit Fokus auf Frontend</b> <br>Umsetzung und Betreuung von neuen und bestehenden Projekten mit Schwerpunkt E-Commerce, Server-Infrastruktur, Erstellung von Entwicklungsumgebungen, CI/CD , Durchführen von Code Reviews, Aushilfe bei Design-Aufgaben',
   },

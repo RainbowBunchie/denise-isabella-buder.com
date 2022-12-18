@@ -35,7 +35,7 @@ const videoUrl = computed(() =>
       <p class="info__description description">
         {{ props.description }}
       </p>
-      <h4 class="info__subline">Technologies used</h4>
+      <h4 class="info__subline">Verwendete Technologien</h4>
       <div class="info__technologies technologies">
         <TheHashtag
           :key="technology"
@@ -43,7 +43,7 @@ const videoUrl = computed(() =>
           :text="technology"
         />
       </div>
-      <h4 class="info__subline">People I worked with</h4>
+      <h4 class="info__subline">Mitwirkende</h4>
       <div class="info__people-tags people-tags">
         <TheHashtag
           :key="person.name"
@@ -84,8 +84,8 @@ const videoUrl = computed(() =>
     align-items: center;
 
     video {
-      width: 350px;
-      height: auto;
+      height: 650px;
+      width: auto;
     }
     &::before {
       content: '';

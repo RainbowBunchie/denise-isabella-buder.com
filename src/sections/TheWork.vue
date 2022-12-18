@@ -36,11 +36,7 @@ const projects = [
     technologies: ['React Native', 'JavaScript', 'Redux'],
     links: [
       {
-        text: 'app (registration/login takes a while)',
-        url: 'https://turtlet.netlify.app/',
-      },
-      {
-        text: 'more information',
+        text: 'weitere Informationen',
         url: 'https://portfolio.fh-salzburg.ac.at/projects/2020-turtlet',
       },
     ],
@@ -68,11 +64,11 @@ const projects = [
     technologies: ['JavaScript', 'AirConsole', 'Phaser.js'],
     links: [
       {
-        text: 'view code',
+        text: 'zum Code',
         url: 'https://github.com/lukasseiwald/MMP3_Buder_Seiwald_Tischhart',
       },
       {
-        text: 'more information',
+        text: 'weitere Informationen',
         url: 'https://portfolio.fh-salzburg.ac.at/projects/2019-soul-collectors',
       },
     ],
@@ -97,7 +93,7 @@ const projects = [
     technologies: ['Web', 'Android App', 'Ruby on rails', 'Java'],
     links: [
       {
-        text: 'view code',
+        text: 'zum Code',
         url: 'https://github.com/RainbowBunchie/helpUhelp',
       },
     ],
@@ -120,11 +116,11 @@ const projects = [
     technologies: ['JavaScript', 'Phaser.js', 'Firebase'],
     links: [
       {
-        text: 'view website',
+        text: 'zur Website',
         url: 'https://cat-curling.netlify.app/',
       },
       {
-        text: 'view code',
+        text: 'zum Code',
         url: 'https://github.com/RainbowBunchie/CatCurling',
       },
     ],
