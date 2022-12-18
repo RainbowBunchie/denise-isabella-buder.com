@@ -39,28 +39,28 @@ const work = [
     subtitle: '@Nolimits Digital Business GmbH',
     labelInfo: '2021-now',
     content:
-      'Fullstack-Entwicklerin mit Fokus auf Frontend, Umsetzung und Betreuung von neuen und bestehenden Projekten mit Schwerpunkt E-Commerce, Server-Infrastruktur, Erstellung von Entwicklungsumgebungen, CI/CD , Durchführen von Code Reviews, Aushilfe bei Design-Aufgaben',
+      '<b>Fullstack-Entwicklerin mit Fokus auf Frontend</b> <br>Umsetzung und Betreuung von neuen und bestehenden Projekten mit Schwerpunkt E-Commerce, Server-Infrastruktur, Erstellung von Entwicklungsumgebungen, CI/CD , Durchführen von Code Reviews, Aushilfe bei Design-Aufgaben',
   },
   {
-    title: 'Frontend-Entwicklerin (Praktikantin)',
+    title: 'Frontend-Entwicklerin',
     subtitle: '@MMCAgenturfür digitale Kommunikation GmbH',
     labelInfo: '2018-2018',
     content:
-      'Umsetzung und Betreuung des Frontends von bestehenden und neuen Kundenprojekten',
+      '<b>6-monatiges Praktikum</b> <br> Umsetzung und Betreuung des Frontends von bestehenden und neuen Kundenprojekten',
   },
   {
-    title: 'Grafik- und Webdesignerin (Praktikantin)',
+    title: 'Grafik- und Webdesignerin',
     subtitle: '@Raiffeisenbank Salzburg',
     labelInfo: '2015-2015',
     content:
-      'Grafische Gestaltung von diversen Printprodukten wie Flyer, Plakate und Booklets, Verwaltung des internen CMS für diverse interne Websites',
+      '<b>4-wöchiges Praktikum</b> <br> Grafische Gestaltung von diversen Printprodukten wie Flyer, Plakate und Booklets, Verwaltung des internen CMS für diverse interne Websites',
   },
   {
-    title: 'Grafikdesignerin (Praktikantin)',
+    title: 'Grafikdesignerin',
     subtitle: '@nmc Salzburg',
     labelInfo: '2014-2014',
     content:
-      'Grafische Gestaltung von diversen Printprodukten wie Flyer, Plakate und Sticker',
+      '<b>4-wöchiges Praktikum</b> <br> Grafische Gestaltung von diversen Printprodukten wie Flyer, Plakate und Sticker',
   },
 ];
 const education = [
@@ -71,7 +71,7 @@ const education = [
     content: `<b>Studiengang:</b>  MultiMediaTechnology mit Spezialisierung in Web Engineering<br>
               <b>Masterarbeit:</b> “Emotionen in E-Learning-Applikationen: Die Auswirkungen von emotionalem Design auf das Lernerlebnis von Volksschulkindern” <br>
               <b>Abschluss:</b> guter Erfolg mit Gesamtbeurteilung von 1,75 <br>
-              <b>Aussercurriculare Aktivitäten:</b> stellvertretende Jahrgangssprechring, Mitorganisation und Co-Moderation der <a href="lude.cat">lude.cat</a>`,
+              <b>Aussercurriculare Aktivitäten:</b> stellvertretende Jahrgangssprechring, Mitorganisation und Co-Moderation der <a href="https://lude.cat/">LudeCat</a>`,
   },
   {
     title: 'Bachelor of Science in Engineering',

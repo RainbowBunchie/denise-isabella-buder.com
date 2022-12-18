@@ -133,12 +133,23 @@ p,
 * {
   font-size: 1.05rem;
   hyphens: auto;
+  color: $color--text;
+
   @media only screen and (min-width: $breakpoint--mobile) {
     font-size: 1.15rem;
   }
 
   @media only screen and (min-width: $breakpoint--tablet) {
     font-size: 1.2rem;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $color--text;
+    transition: 0.25s color ease;
+    &:hover {
+      color: $color--accent;
+    }
   }
 }
 
@@ -176,14 +187,5 @@ body {
   h2 {
     font-weight: bold;
     text-transform: uppercase;
-  }
-
-  a {
-    text-decoration: underline;
-    color: $color--text;
-    transition: 0.25s color ease;
-    &:hover {
-      color: $color--accent;
-    }
   }
 }
