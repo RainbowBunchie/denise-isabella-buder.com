@@ -155,7 +155,7 @@ const skills = [
       width: 100vw;
       position: absolute;
       left: 50%;
-      top: calc(-19px);
+      top: -26px;
       transform: translateX(-50%);
       border-top: 8px solid $color--accent;
       display: none;
