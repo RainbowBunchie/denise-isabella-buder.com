@@ -119,7 +119,7 @@ h3 * {
 }
 
 .container {
-  width: calc(100vw - 2 * 190px);
+  width: 100%;
   padding: 0 1rem;
   max-width: 1500px;
   margin: 0 auto;
@@ -127,6 +127,10 @@ h3 * {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (min-width: $breakpoint--large-desktop) {
+    width: calc(100vw - 2 * 190px);
+  }
 }
 
 p,
