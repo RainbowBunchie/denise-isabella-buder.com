@@ -39,7 +39,7 @@
   width: 100%;
   align-items: center;
 
-  @media only screen and (min-width: $breakpoint--desktop) {
+  @media only screen and (min-width: $breakpoint--xlarge-desktop) {
     gap: 5rem;
     padding: 6rem 5rem;
     flex-direction: row;
@@ -57,7 +57,7 @@
     width: calc(100% - (400px + 12rem) / 2);
     display: none;
     transform: translateY(-50%);
-    @media only screen and (min-width: $breakpoint--desktop) {
+    @media only screen and (min-width: $breakpoint--xlarge-desktop) {
       display: block;
     }
   }
@@ -74,7 +74,7 @@
     width: calc(400px + 12rem);
     display: none;
 
-    @media only screen and (min-width: $breakpoint--desktop) {
+    @media only screen and (min-width: $breakpoint--xlarge-desktop) {
       display: block;
     }
   }
@@ -102,12 +102,12 @@
         height: 600px;
         top: calc(-600px + 2rem);
       }
-      @media only screen and (min-width: $breakpoint--desktop) {
+      @media only screen and (min-width: $breakpoint--xlarge-desktop) {
         display: none;
       }
     }
 
-    @media only screen and (min-width: $breakpoint--desktop) {
+    @media only screen and (min-width: $breakpoint--xlarge-desktop) {
       background-color: transparent;
       padding: 0;
       max-width: none;
@@ -127,7 +127,7 @@
       width: calc(600px - 4rem);
       padding: 0;
     }
-    @media only screen and (min-width: $breakpoint--desktop) {
+    @media only screen and (min-width: $breakpoint--xlarge-desktop) {
       width: 400px;
       height: 400px;
     }

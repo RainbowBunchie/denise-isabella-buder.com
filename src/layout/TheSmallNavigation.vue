@@ -12,8 +12,17 @@ import { RouterLink } from 'vue-router';
 .nav--small {
   position: fixed;
   z-index: 7000;
-  left: 1rem;
-  top: 1rem;
+  top: 0;
+  left: 0;
+  padding: 1rem 1rem 0.5rem;
+  background-color: $color--secondary;
+
+  @media only screen and (min-width: $breakpoint--large-desktop) {
+    padding: 0;
+    top: 1rem;
+    left: 1rem;
+    background-color: $color--secondary;
+  }
 
   a {
     color: $color--primary;

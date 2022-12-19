@@ -94,7 +94,15 @@ const paddingClass = computed(() => (props.padded ? 'footer--padded' : ''));
 
   &--padded {
     .footer__links {
-      padding: 20rem 0 7.5rem;
+      padding: 15rem 0 7.5rem;
+
+      @media only screen and (min-width: $breakpoint--tablet) {
+        padding: 14rem 0 7.5rem;
+      }
+
+      @media only screen and (min-width: $breakpoint--desktop) {
+        padding: 20rem 0 7.5rem;
+      }
     }
   }
 }

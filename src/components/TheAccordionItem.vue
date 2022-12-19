@@ -20,7 +20,7 @@ const uniqueId = computed(
       <p class="label__subtitle">{{ props.subtitle }}</p>
       <p class="label__info" v-if="labelInfo">{{ labelInfo }}</p>
     </label>
-    <div v-html="props.content" class="item__content"></div>
+    <p v-html="props.content" class="item__content"></p>
   </div>
 </template>
 

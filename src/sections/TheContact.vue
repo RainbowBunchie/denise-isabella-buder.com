@@ -45,40 +45,6 @@ onMounted(() => {
   }
 
   .container {
-    position: absolute;
-  }
-
-  &__download {
-    color: $color--secondary;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-style: italic;
-    text-decoration: none;
-    margin-top: 0.5rem;
-    padding-left: 45px;
-    transition: padding-left 0.25s ease-in-out;
-    &::before {
-      content: '';
-      width: 40px;
-      height: 6px;
-      background-color: $color--secondary;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%) skew(-12deg);
-      transition: all 0.25s ease-in-out;
-      max-width: 40px;
-    }
-    &:hover {
-      padding-left: 75px;
-      &::before {
-        width: 70px;
-        max-width: 70px;
-      }
-    }
-  }
-
-  .container {
     position: relative;
     min-height: 0;
     background-color: $color--accent;
@@ -93,13 +59,22 @@ onMounted(() => {
     padding-bottom: 2rem;
     margin: 0 2rem;
     @media only screen and (min-width: $breakpoint--tablet) {
+      max-width: 1200px;
       border-top-right-radius: 350px;
       border-bottom-right-radius: 350px;
-      height: 450px;
       position: absolute;
+      width: calc(100vw - 4rem);
+      padding: 4rem 7rem 4rem 3rem;
+      font-size: 1.7rem;
+    }
+    @media only screen and (min-width: $breakpoint--desktop) {
+      padding: 5rem 7rem 5rem 3rem;
       font-size: 2rem;
-      width: 100%;
-      padding: 0 10rem 0 8rem;
+    }
+    @media only screen and (min-width: $breakpoint--large-desktop) {
+      width: calc(100vw - 4rem);
+      padding: 6rem 10rem 6rem 8rem;
+      font-size: 2rem;
     }
   }
 }

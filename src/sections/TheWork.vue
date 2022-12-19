@@ -171,7 +171,11 @@ const projects = [
   padding-bottom: 25vh;
 
   @media only screen and (min-width: $breakpoint--tablet) {
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
+  }
+
+  @media only screen and (min-width: $breakpoint--desktop) {
+    padding-bottom: 15rem;
   }
 
   &::before {
