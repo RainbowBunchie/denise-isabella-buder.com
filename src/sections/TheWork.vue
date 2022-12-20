@@ -72,7 +72,8 @@ const projects = [
     description: `...ist ein lokales FFA-Browser-Multiplayer-Spiel, in welchem das eigene Smartphone als Gamepad genutzt wird. 
     Wenn ein Spieler eliminiert wird, erscheint eine Seele über dem toten Körper des Spielers. Das Ziel der anderen Spieler ist 
     es nun, diese Seele einzusammeln und zu ihrer eigenen Basis zurückzubringen. Wenn es einem Spieler gelingt, die Seelen aller 
-    gegnerischen Spieler einzusammeln, gewinnt er die Runde.`,
+    gegnerischen Spieler einzusammeln, gewinnt er die Runde. Ich habe mich vor Allem mit der Kommunikation zwischen den Gamepads 
+    und dem Hauptbildschirm beschäftigt.`,
     technologies: ['JavaScript', 'AirConsole', 'Phaser.js'],
     links: [
       {
