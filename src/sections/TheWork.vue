@@ -164,7 +164,7 @@ const projects = [
 @import '../assets/variables.scss';
 
 .work {
-  padding-top: 7.5rem;
+  padding-top: 5rem;
   position: relative;
   width: 100%;
   display: flex;
