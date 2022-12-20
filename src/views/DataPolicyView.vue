@@ -10,10 +10,7 @@ import TheHeadline from '../components/TheHeadline.vue';
   </header>
   <main>
     <div class="container">
-      <TheHeadline
-        text="Datenschutzerklärung"
-        color="rgb(188, 19, 48)"
-      ></TheHeadline>
+      <TheHeadline text="Datenschutz" color="rgb(188, 19, 48)"></TheHeadline>
       <div class="text">
         <h2>Einleitung und Überblick</h2>
         <p>
@@ -443,5 +440,9 @@ import TheHeadline from '../components/TheHeadline.vue';
   justify-content: flex-start;
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.text {
+  width: 100%;
 }
 </style>
