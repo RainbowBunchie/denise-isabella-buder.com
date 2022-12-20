@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
 
-const html = document.getElementsByTagName('html')[0];
+const [html] = document.getElementsByTagName('html');
 
 function toggleOverlay() {
   html.classList.toggle('html--overlay-open');
+}
+
+function closeNavigation() {
+  const [burgerInput] = document.getElementsByClassName('nav__input');
+  const input = burgerInput as HTMLInputElement;
+  input.checked = false;
+  html.classList.remove('html--overlay-open');
 }
 </script>
 <template>
@@ -17,12 +24,14 @@ function toggleOverlay() {
   ></label>
   <nav class="nav nav--main">
     <RouterLink
+      @click="closeNavigation"
       :class="$route.fullPath.includes('#about') ? 'router-link--active' : ''"
       :to="{ name: 'home', hash: '#about' }"
       exact
       >Über mich</RouterLink
     >
     <RouterLink
+      @click="closeNavigation"
       :class="
         $route.fullPath.includes('#skillset') ? 'router-link--active' : ''
       "
@@ -31,6 +40,7 @@ function toggleOverlay() {
       >Skillset</RouterLink
     >
     <RouterLink
+      @click="closeNavigation"
       :class="
         $route.fullPath.includes('#experience') ? 'router-link--active' : ''
       "
@@ -39,6 +49,7 @@ function toggleOverlay() {
       >Erfahrung</RouterLink
     >
     <RouterLink
+      @click="closeNavigation"
       :class="$route.fullPath.includes('#work') ? 'router-link--active' : ''"
       :to="{ name: 'home', hash: '#work' }"
       exact
