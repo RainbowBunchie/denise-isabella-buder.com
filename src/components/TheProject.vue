@@ -28,10 +28,8 @@ const videoClass = computed(() =>
 <template>
   <div class="project" :class="videoClass">
     <div class="project__video video" :class="videoClass">
-      <video :src="videoUrl" autoplay muted loop>
-        Ihr Browser kann dieses Video nicht wiedergeben.<br />
-        Dieser Film zeigt eine Demonstration des video-Elements. Sie können ihn
-        unter <a :href="videoUrl">Link-Addresse</a> abrufen.
+      <video autoplay loop muted playsinline>
+        <source :src="videoUrl" type="video/mp4" />
       </video>
     </div>
     <div class="project__info info">
