@@ -53,10 +53,11 @@ const projects = [
         name: 'Alexander Tischhart',
       },
     ],
+    isPhone: true,
   },
   {
     title: 'SOUL COLLECTORS',
-    video: 'helpuhelp.webm',
+    video: 'catcurling.webm',
     description: `...ist ein lokales FFA-Browser-Multiplayer-Spiel, in welchem das eigene Smartphone als Gamepad genutzt wird. 
     Wenn ein Spieler eliminiert wird, erscheint eine Seele über dem toten Körper des Spielers. Das Ziel der anderen Spieler ist 
     es nun, diese Seele einzusammeln und zu ihrer eigenen Basis zurückzubringen. Wenn es einem Spieler gelingt, die Seelen aller 
@@ -81,6 +82,7 @@ const projects = [
         name: 'Alexander Tischhart',
       },
     ],
+    isPhone: false,
   },
   {
     title: 'Help(u)help',
@@ -105,10 +107,11 @@ const projects = [
         name: 'Alexander Tischhart',
       },
     ],
+    isPhone: true,
   },
   {
     title: 'Cat Curling',
-    video: 'helpuhelp.webm',
+    video: 'catcurling.webm',
     description: `...ist ein Browser-Spiel, bei dem man in einem Wohnzimmer mit Katzen Curling spielt! 
     Der Spieler hat nur eine bestimmte Anzahl von Schüssen, um die Katze ins Ziel zu bringen und die bestmögliche Punktzahl zu erreichen. 
     Das Spiel besteht aus fünf Levels mit steigendem Schwierigkeitsgraden.
@@ -132,6 +135,7 @@ const projects = [
         name: 'Selina Brunner',
       },
     ],
+    isPhone: false,
   },
 ];
 </script>
@@ -150,6 +154,7 @@ const projects = [
         :people="project.people"
         :links="project.links"
         :video="project.video"
+        :isPhone="project.isPhone"
       />
     </div>
   </section>

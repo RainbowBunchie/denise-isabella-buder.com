@@ -10,6 +10,7 @@ interface Props {
   people: { name: string; link?: string }[];
   links?: { text: string; url?: string }[];
   video: string;
+  isPhone: boolean;
 }
 
 const props = defineProps<Props>();
@@ -19,11 +20,14 @@ const flexDirection = computed(() =>
 const videoUrl = computed(() =>
   new URL(`../assets/videos/${props.video}`, import.meta.url).toString()
 );
+const videoClass = computed(() =>
+  props.isPhone == true ? 'project--phone' : 'project--tablet'
+);
 </script>
 
 <template>
-  <div class="project">
-    <div class="project__img">
+  <div class="project" :class="videoClass">
+    <div class="project__video video" :class="videoClass">
       <video :src="videoUrl" autoplay muted loop>
         Ihr Browser kann dieses Video nicht wiedergeben.<br />
         Dieser Film zeigt eine Demonstration des video-Elements. Sie können ihn
@@ -67,40 +71,114 @@ const videoUrl = computed(() =>
 .project {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
+  margin-top: 8rem;
+  width: 100%;
+
+  @media only screen and (min-width: $breakpoint--tablet) {
+    gap: 4rem;
+  }
   @media only screen and (min-width: $breakpoint--desktop) {
     margin-top: 7rem;
-    gap: 10rem;
     flex-direction: v-bind(flexDirection);
+  }
+
+  @media only screen and (min-width: $breakpoint--large-desktop) {
+    gap: 10rem;
   }
 
   &:nth-child(2) {
     margin-top: 0;
   }
-  &__img {
+  .video {
+    margin: 0 auto;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 30%;
 
-    video {
-      height: 650px;
-      width: auto;
+    @media only screen and (min-width: $breakpoint--desktop) {
+      width: 35%;
     }
+
     &::before {
       content: '';
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
-      bottom: -3rem;
+      top: 50%;
+      transform: translate(-50%, -50%);
       background-color: $color--accent;
-      width: 430px;
-      height: 430px;
+      width: 70vw;
+      height: 70vw;
       border-radius: 100%;
+
+      @media only screen and (min-width: $breakpoint--tablet) {
+        width: 50vw;
+        height: 50vw;
+      }
+
+      @media only screen and (min-width: $breakpoint--desktop) {
+        width: 430px;
+        height: 430px;
+      }
+
+      @media only screen and (min-width: $breakpoint--large-desktop) {
+        width: 470px;
+        height: 470px;
+      }
     }
     .img__image {
       height: 480px;
       width: auto;
+    }
+  }
+
+  video {
+    object-fit: contain;
+    min-width: 100%;
+    min-height: 60%;
+  }
+
+  &--phone {
+    @media only screen and (min-width: $breakpoint--tablet) {
+      gap: 5rem;
+    }
+
+    @media only screen and (min-width: $breakpoint--desktop) {
+      gap: 4rem;
+    }
+
+    @media only screen and (min-width: $breakpoint--large-desktop) {
+      gap: 5rem;
+    }
+    .video {
+      width: 50vw;
+      @media only screen and (min-width: $breakpoint--tablet) {
+        width: 30vw;
+      }
+      @media only screen and (min-width: $breakpoint--desktop) {
+        width: 25%;
+      }
+    }
+
+    video {
+      min-width: 70%;
+    }
+  }
+  &--tablet {
+    video {
+      min-width: 80vw;
+      @media only screen and (min-width: $breakpoint--tablet) {
+        min-width: 150%;
+      }
+      @media only screen and (min-width: $breakpoint--desktop) {
+        min-width: 110%;
+      }
+
+      @media only screen and (min-width: $breakpoint--large-desktop) {
+        min-width: 150%;
+      }
     }
   }
   &__info {
