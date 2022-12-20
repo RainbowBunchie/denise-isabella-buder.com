@@ -55,8 +55,7 @@ onMounted(() => {
     z-index: 50;
     font-size: 1.5rem;
     font-weight: 600;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 1.25rem;
     margin: 0 2rem;
     @media only screen and (min-width: $breakpoint--tablet) {
       max-width: 1200px;
