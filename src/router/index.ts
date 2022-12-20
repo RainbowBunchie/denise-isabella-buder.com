@@ -19,6 +19,7 @@ const router = createRouter({
       name: 'imprint',
       component: () => import('../views/ImprintView.vue'),
     },
+    { path: '/:catchAll(.*)', component: () => (window.location.href = '/') },
   ],
   scrollBehavior(to) {
     if (to.params.savePosition) return {};
