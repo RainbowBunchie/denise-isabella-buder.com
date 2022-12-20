@@ -53,7 +53,7 @@ const work = [
     subtitle: '@Raiffeisenbank Salzburg',
     labelInfo: '2015-2015',
     content:
-      '<b>4-wöchiges Praktikum</b> <br> Grafische Gestaltung von diversen Printprodukten wie Flyer, Plakate und Booklets, Verwaltung des internen CMS für diverse interne Websites',
+      '<b>4-wöchiges Praktikum</b> <br> Grafische Gestaltung von diversen Printprodukten wie Flyer, Plakate und Booklets, Erstellung von Illustrationen, Verwaltung des internen CMS für diverse interne Websites',
   },
   {
     title: 'Grafikdesignerin',
@@ -69,24 +69,24 @@ const education = [
     subtitle: '@Fachhochschule Salzburg',
     labelInfo: '2019-2021',
     content: `<b>Studiengang:</b>  MultiMediaTechnology mit Spezialisierung in Web Engineering<br>
-              <b>Masterarbeit:</b> “Emotionen in E-Learning-Applikationen: Die Auswirkungen von emotionalem Design auf das Lernerlebnis von Volksschulkindern” <br>
+              <b>Masterarbeit:</b> „Emotionen in E-Learning-Applikationen: Die Auswirkungen von emotionalem Design auf das Lernerlebnis von Volksschulkindern“ <br>
               <b>Abschluss:</b> guter Erfolg mit Gesamtbeurteilung von 1,75 <br>
-              <b>Aussercurriculare Aktivitäten:</b> stellvertretende Jahrgangssprechring, Mitorganisation und Co-Moderation der <a href="https://lude.cat/">LudeCat</a>`,
+              <b>Aussercurriculare Aktivitäten:</b> stellvertretende Jahrgangssprechrin, Mitorganisation und Co-Moderation der <a title="Zur Website von LudeCat wechseln "href="https://lude.cat/">LudeCat</a>`,
   },
   {
     title: 'Bachelor of Science in Engineering',
     subtitle: '@Fachhochschule Salzburg',
     labelInfo: '2016-2019',
     content: `<b>Studiengang:</b> MultiMediaTechnology mit Spezialisierung in Web Development <br>
-              <b>Bachelorarbeit 1:</b> “Erkennen von Depression mit Hilfe von Social Media Mining” <br>
-              <b>Bachelorarbeit 2:</b> "Identifizierung im Web durch Gesichts- und Sprechererkennung" <br>
+              <b>Bachelorarbeit 1:</b> „Erkennen von Depression mit Hilfe von Social Media Mining“ <br>
+              <b>Bachelorarbeit 2:</b> „Identifizierung im Web durch Gesichts- und Sprechererkennung“ <br>
               <b>Abschluss:</b> guter Erfolg mit einer Gesamtbeurteilung von 1,45`,
   },
   {
     title: 'Matura',
     subtitle: '@HTBLuVA Salzburg',
     labelInfo: '2011-2016',
-    content: `<b>Schwerpunkt:</b> Grafik- und Kommunikationsdesign
+    content: `<b>Schwerpunkt:</b> Grafik- und Kommunikationsdesign<br>
               <b>Abschluss:</b> ausgezeichneter Erfolg`,
   },
 ];

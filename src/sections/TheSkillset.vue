@@ -41,10 +41,13 @@ const skills = [
         text: 'HTML',
       },
       {
+        text: 'Twig',
+      },
+      {
         text: 'CSS',
       },
       {
-        text: 'SASS',
+        text: 'SCSS',
       },
       {
         text: 'JavaScript',
@@ -72,18 +75,26 @@ const skills = [
       {
         text: 'React Native',
       },
-
+      {
+        text: 'Redux',
+      },
       {
         text: 'Node.js',
       },
       {
-        text: 'webpack',
+        text: 'Express.js',
       },
       {
-        text: 'GitHub Actions',
+        text: 'Git',
       },
       {
         text: 'Docker',
+      },
+      {
+        text: 'Webpack',
+      },
+      {
+        text: 'GitHub Actions',
       },
       {
         text: 'Shopware 5 & 6',
@@ -107,9 +118,6 @@ const skills = [
       },
       {
         text: 'Lightroom',
-      },
-      {
-        text: 'Adobe XD',
       },
     ],
   },

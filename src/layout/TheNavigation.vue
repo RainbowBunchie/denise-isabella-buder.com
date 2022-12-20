@@ -181,12 +181,16 @@ $burger-width: 36px;
       position: absolute;
       top: calc(50%);
       transform: translateY(-50%) skew(-12deg);
-      left: 0;
+      right: 0;
       width: 50px;
       height: 4px;
       max-width: 0;
       background-color: $color--primary;
       transition: all 0.25s ease-in-out;
+      @media only screen and (min-width: $breakpoint--large-desktop) {
+        left: 0;
+        right: auto;
+      }
     }
     &.router-link--active {
       font-style: italic;

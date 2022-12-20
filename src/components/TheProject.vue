@@ -30,6 +30,7 @@ const videoClass = computed(() =>
     <div class="project__video video" :class="videoClass">
       <video autoplay loop muted playsinline>
         <source :src="videoUrl" type="video/mp4" />
+        Dein Browser unterstützt keine Videos.
       </video>
     </div>
     <div class="project__info info">

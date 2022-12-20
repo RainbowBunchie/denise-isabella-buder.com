@@ -13,6 +13,9 @@ const paddingClass = computed(() => (props.padded ? 'footer--padded' : ''));
   <nav class="nav nav--footer footer" :class="paddingClass">
     <div class="footer__links">
       <div class="links__socials socials">
+        <a class="socials__link" href="mailto:d.buder@sbg.at" target="_blank">
+          <font-awesome-icon :icon="['fa', 'envelope']" class="icon" />
+        </a>
         <a
           class="socials__link"
           href="https://github.com/RainbowBunchie"
@@ -67,7 +70,7 @@ const paddingClass = computed(() => (props.padded ? 'footer--padded' : ''));
       width: 100%;
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.75rem;
       &__link {
         transition: all 0.35s ease;
 
