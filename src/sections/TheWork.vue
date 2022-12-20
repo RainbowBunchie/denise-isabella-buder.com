@@ -32,8 +32,19 @@ const projects = [
   {
     title: 'Turtlet',
     video: 'helpuhelp.mp4',
-    description: `... ist ein entschleunigender Messaging-Dienst für Web und Smartphones, der dem schnelllebigen Zeitgeist unserer digitalen Gesellschaft entgegenwirkt, indem die gesendeten Nachrichten (so genannten "Turtlets") mehr emotionalen Wert und Individualität verliehen wird. Ähnlich wie bei einem Brief oder einer Postkarte können Turtlets jeweils nur an eine Person gesendet werden und benötigen eine gewisse Zeit, um den Empfänger zu erreichen.`,
-    technologies: ['React Native', 'JavaScript', 'Redux'],
+    description: `... ist ein entschleunigender Messaging-Dienst für Web und Smartphones, der dem schnelllebigen Zeitgeist unserer digitalen Gesellschaft entgegenwirkt, 
+    indem die gesendeten Nachrichten (so genannten "Turtlets") mehr emotionalen Wert und Individualität verliehen wird. 
+    Ähnlich wie bei einem Brief oder einer Postkarte können Turtlets jeweils nur an eine Person gesendet werden und 
+    benötigen eine gewisse Zeit, um den Empfänger zu erreichen. Ich habe mich mit der Umsetzung des Frontends mit speziellem Fokus auf Authentifizierung und State-Magement beschäftigt.`,
+    technologies: [
+      'React Native',
+      'React Native Web',
+      'Expo',
+      'JavaScript',
+      'Redux',
+      'NestJS',
+      'TypeScript',
+    ],
     links: [
       {
         text: 'weitere Informationen',
@@ -65,10 +76,6 @@ const projects = [
     technologies: ['JavaScript', 'AirConsole', 'Phaser.js'],
     links: [
       {
-        text: 'zum Code',
-        url: 'https://github.com/lukasseiwald/MMP3_Buder_Seiwald_Tischhart',
-      },
-      {
         text: 'weitere Informationen',
         url: 'https://portfolio.fh-salzburg.ac.at/projects/2019-soul-collectors',
       },
@@ -92,12 +99,12 @@ const projects = [
     Diese haben nun die Möglichkeit, diese Aufgaben einzusehen und sich für sie zu bewerben. 
     Nach der Bewerbung wählt der Administrator einen der Freiwilligen aus und weist die Aufgabe zu.
    `,
-    technologies: ['Web', 'Android App', 'Ruby on rails', 'Java'],
+    technologies: ['Web', 'Android App', 'Ruby on Rails', 'Java'],
     links: [
-      {
-        text: 'zum Code',
-        url: 'https://github.com/RainbowBunchie/helpUhelp',
-      },
+      // {
+      //   text: 'zum Code',
+      //   url: 'https://github.com/RainbowBunchie/helpUhelp',
+      // },
     ],
     people: [
       {
@@ -119,13 +126,13 @@ const projects = [
     technologies: ['JavaScript', 'Phaser.js', 'Firebase'],
     links: [
       {
-        text: 'zur Website',
+        text: 'zum Spiel',
         url: 'https://cat-curling.netlify.app/',
       },
-      {
-        text: 'zum Code',
-        url: 'https://github.com/RainbowBunchie/CatCurling',
-      },
+      // {
+      //   text: 'zum Code',
+      //   url: 'https://github.com/RainbowBunchie/CatCurling',
+      // },
     ],
     people: [
       {
