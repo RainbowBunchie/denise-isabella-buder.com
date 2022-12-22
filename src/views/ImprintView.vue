@@ -2,6 +2,11 @@
 import Navigation from '../layout/TheSmallNavigation.vue';
 import TheHeadline from '../components/TheHeadline.vue';
 import Footer from '../layout/TheFooter.vue';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  window.scrollTo(0, 0);
+});
 </script>
 
 <template>

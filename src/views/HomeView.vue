@@ -51,6 +51,7 @@ function sectionObserverHandler(entries: IntersectionObserverEntry[]) {
 
 onMounted(() => {
   observeSections();
+  window.scrollTo(0, 0);
 });
 </script>
 
