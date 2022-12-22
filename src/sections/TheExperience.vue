@@ -71,7 +71,7 @@ const education = [
     content: `<b>Studiengang:</b>  MultiMediaTechnology mit Spezialisierung in Web Engineering<br>
               <b>Masterarbeit:</b> „Emotionen in E-Learning-Applikationen: Die Auswirkungen von emotionalem Design auf das Lernerlebnis von Volksschulkindern“ <br>
               <b>Abschluss:</b> guter Erfolg mit Gesamtbeurteilung von 1,75 <br>
-              <b>Aussercurriculare Aktivitäten:</b> stellvertretende Jahrgangssprechrin, Mitorganisation und Co-Moderation der <a title="Zur Website von LudeCat wechseln "href="https://lude.cat/">LudeCat</a>`,
+              <b>Außercurriculare Aktivitäten:</b> stellvertretende Jahrgangssprecherin, Mitorganisation und Co-Moderation der <a title="Zur Website von LudeCat wechseln "href="https://lude.cat/">LudeCat</a>`,
   },
   {
     title: 'Bachelor of Science in Engineering',

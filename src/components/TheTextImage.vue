@@ -15,12 +15,12 @@
       <p>
         Ich bin Denise und ich bin Webentwicklerin und -designerin mit Standort
         in Salzburg, Österreich. Meinen ersten Berührungspunkt mit
-        Webentwicklung hatte ich bereits 2015 in der Schule als ich die Basics
+        Webentwicklung hatte ich bereits 2015 in der Schule, als ich die Basics
         von HTML, CSS und JavaScript erlernte und ich so meine Leidenschaft für
         die Programmierung entdecken konnte. Nun, Jahre später, mit einem
         Masterabschluss in Web Engineering (MultiMediaTechnology), arbeite ich
         als (Fullstack-)Webentwicklerin, mit derzeitigem Fokus auf Frontend. Ich
-        probiere mich gerne an neuen und innovtiven Technologien/Trends und bin
+        probiere mich gerne an neuen und innovativen Technologien/Trends und bin
         daher immer auf der Suche nach neuen Frameworks, Tools und
         Herausforderungen.
       </p>

@@ -32,7 +32,7 @@ onMounted(() => {
 
 <template>
   <section class="section section--about about" id="about">
-    <TheHeadline color="#2a2726" text="About me" />
+    <TheHeadline color="#2a2726" text="Über mich" />
     <div class="container">
       <TheTextImage></TheTextImage>
     </div>

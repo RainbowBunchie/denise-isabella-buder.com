@@ -29,6 +29,10 @@ import Footer from '../layout/TheFooter.vue';
             >d.buder@sbg.at</a
           ><br />
         </p>
+        <p>
+          Telefon:
+          <a href="tel:+436649537633" target="_blank">+43 664 9537633</a><br />
+        </p>
       </div>
     </div>
   </main>
