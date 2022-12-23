@@ -64,6 +64,7 @@ $burger-width: 36px;
 
 .burger {
   width: $burger-width;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   height: $burger-height;
   position: fixed;
   bottom: 1rem;
@@ -71,7 +72,6 @@ $burger-width: 36px;
   z-index: 50000;
   cursor: pointer;
   pointer-events: all;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   @media only screen and (min-width: $breakpoint--large-desktop) {
     display: none;
   }
@@ -135,7 +135,7 @@ $burger-width: 36px;
   padding-bottom: calc(5rem + 31px);
   gap: 1rem;
   align-items: flex-end;
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   transform: translateX(300%);
 
   &::before {
