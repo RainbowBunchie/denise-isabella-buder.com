@@ -117,7 +117,7 @@ $burger-width: 36px;
       }
 
       + .nav--main {
-        transform: translateX(0);
+        right: 1rem;
       }
     }
   }
@@ -129,14 +129,13 @@ $burger-width: 36px;
   pointer-events: all;
   display: flex;
   flex-direction: column;
-  right: 0;
+  right: -350px;
   bottom: 0;
   padding-right: 1rem;
   padding-bottom: calc(5rem + 31px);
   gap: 1rem;
   align-items: flex-end;
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(300%);
+  transition: right 0.5s ease-in-out;
 
   &::before {
     content: '';
@@ -145,9 +144,10 @@ $burger-width: 36px;
     height: 300%;
     transform: skew(-45deg);
     transform-origin: bottom left;
-    right: -0%;
+    left: -350px;
     bottom: 0;
     background-color: $color--secondary;
+    transition: left 0.5s ease-in-out;
   }
   @media only screen and (min-width: $breakpoint--large-desktop) {
     display: flex;
