@@ -31,7 +31,7 @@ onMounted(() => {
 const projects = [
   {
     title: 'Turtlet',
-    video: 'helpuhelp.mp4',
+    video: 'helpuhelp.webm',
     description: `... ist ein entschleunigender Messaging-Dienst für Web und Smartphones, der dem schnelllebigen Zeitgeist unserer digitalen Gesellschaft entgegenwirkt, 
     indem die gesendeten Nachrichten (so genannten "Turtlets") mehr emotionalen Wert und Individualität verliehen wird. 
     Ähnlich wie bei einem Brief oder einer Postkarte können Turtlets jeweils nur an eine Person gesendet werden und 
@@ -68,7 +68,7 @@ const projects = [
   },
   {
     title: 'SOUL COLLECTORS',
-    video: 'catcurling.mp4',
+    video: 'catcurling.webm',
     description: `...ist ein lokales FFA-Browser-Multiplayer-Spiel, in welchem das eigene Smartphone als Gamepad genutzt wird. 
     Wenn ein Spieler eliminiert wird, erscheint eine Seele über dem toten Körper des Spielers. Das Ziel der anderen Spieler ist 
     es nun, diese Seele einzusammeln und zu ihrer eigenen Basis zurückzubringen. Wenn es einem Spieler gelingt, die Seelen aller 
@@ -94,7 +94,7 @@ const projects = [
   },
   {
     title: 'Help(u)help',
-    video: 'helpuhelp.mp4',
+    video: 'helpuhelp.webm',
     description: `...ist ein Tool, welches Sozialarbeitern dabei hilft, verschiedene Aufgaben für Freiwillige zu organisieren. 
     Administratoren können Aufgaben erstellen, die den registrierten Freiwilligen angezeigt werden. 
     Diese haben nun die Möglichkeit, diese Aufgaben einzusehen und sich für sie zu bewerben. 
@@ -119,7 +119,7 @@ const projects = [
   },
   {
     title: 'Cat Curling',
-    video: 'catcurling.mp4',
+    video: 'catcurling.webm',
     description: `...ist ein Browser-Spiel, bei dem man in einem Wohnzimmer mit Katzen Curling spielt! 
     Der Spieler hat nur eine bestimmte Anzahl von Schüssen, um die Katze ins Ziel zu bringen und die bestmögliche Punktzahl zu erreichen. 
     Das Spiel besteht aus fünf Levels mit steigendem Schwierigkeitsgrad.
