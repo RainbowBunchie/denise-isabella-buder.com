@@ -31,10 +31,19 @@ onMounted(() => {
 const projects = [
   {
     title: 'Turtlet',
-    video: 'helpuhelp.webm',
-    description: `... ist ein entschleunigender Messaging-Dienst für Web und Smartphones, der dem schnelllebigen Zeitgeist unserer digitalen Gesellschaft entgegenwirkt, 
-    indem die gesendeten Nachrichten (so genannten "Turtlets") mehr emotionalen Wert und Individualität verliehen wird. 
-    Ähnlich wie bei einem Brief oder einer Postkarte können Turtlets jeweils nur an eine Person gesendet werden und 
+    videos: [
+      {
+        fileName: 'turtlet.webm',
+        type: 'video/webm',
+      },
+      {
+        fileName: 'turtlet.mov',
+        type: 'video/mp4; codecs="hvc1"',
+      },
+    ],
+    description: `... ist ein entschleunigender Messaging-Dienst für Web und Smartphones, der dem schnelllebigen Zeitgeist unserer digitalen Gesellschaft entgegenwirkt,
+    indem die gesendeten Nachrichten (so genannten "Turtlets") mehr emotionalen Wert und Individualität verliehen wird.
+    Ähnlich wie bei einem Brief oder einer Postkarte können Turtlets jeweils nur an eine Person gesendet werden und
     benötigen eine gewisse Zeit, um den Empfänger zu erreichen. Ich habe mich mit der Umsetzung des Frontends mit speziellem Fokus auf Authentifizierung und State-Magement beschäftigt.`,
     technologies: [
       'React Native',
@@ -68,11 +77,20 @@ const projects = [
   },
   {
     title: 'SOUL COLLECTORS',
-    video: 'catcurling.webm',
-    description: `...ist ein lokales FFA-Browser-Multiplayer-Spiel, in welchem das eigene Smartphone als Gamepad genutzt wird. 
-    Wenn ein Spieler eliminiert wird, erscheint eine Seele über dem toten Körper des Spielers. Das Ziel der anderen Spieler ist 
-    es nun, diese Seele einzusammeln und zu ihrer eigenen Basis zurückzubringen. Wenn es einem Spieler gelingt, die Seelen aller 
-    gegnerischen Spieler einzusammeln, gewinnt er die Runde. Ich habe mich vor allem mit der Kommunikation zwischen den Gamepads 
+    videos: [
+      {
+        fileName: 'soulcollectors.webm',
+        type: 'video/webm',
+      },
+      {
+        fileName: 'soulcollectors.mov',
+        type: 'video/mp4; codecs="hvc1"',
+      },
+    ],
+    description: `...ist ein lokales FFA-Browser-Multiplayer-Spiel, in welchem das eigene Smartphone als Gamepad genutzt wird.
+    Wenn ein Spieler eliminiert wird, erscheint eine Seele über dem toten Körper des Spielers. Das Ziel der anderen Spieler ist
+    es nun, diese Seele einzusammeln und zu ihrer eigenen Basis zurückzubringen. Wenn es einem Spieler gelingt, die Seelen aller
+    gegnerischen Spieler einzusammeln, gewinnt er die Runde. Ich habe mich vor allem mit der Kommunikation zwischen den Gamepads
     und dem Hauptbildschirm beschäftigt.`,
     technologies: ['JavaScript', 'AirConsole', 'Phaser.js'],
     links: [
@@ -94,10 +112,19 @@ const projects = [
   },
   {
     title: 'Help(u)help',
-    video: 'helpuhelp.webm',
-    description: `...ist ein Tool, welches Sozialarbeitern dabei hilft, verschiedene Aufgaben für Freiwillige zu organisieren. 
-    Administratoren können Aufgaben erstellen, die den registrierten Freiwilligen angezeigt werden. 
-    Diese haben nun die Möglichkeit, diese Aufgaben einzusehen und sich für sie zu bewerben. 
+    videos: [
+      {
+        fileName: 'helpuhelp.webm',
+        type: 'video/webm',
+      },
+      {
+        fileName: 'helpuhelp.mov',
+        type: 'video/mp4; codecs="hvc1"',
+      },
+    ],
+    description: `...ist ein Tool, welches Sozialarbeitern dabei hilft, verschiedene Aufgaben für Freiwillige zu organisieren.
+    Administratoren können Aufgaben erstellen, die den registrierten Freiwilligen angezeigt werden.
+    Diese haben nun die Möglichkeit, diese Aufgaben einzusehen und sich für sie zu bewerben.
     Nach der Bewerbung wählt der Administrator einen der Freiwilligen aus und weist die Aufgabe zu.
    `,
     technologies: ['Web', 'Android App', 'Ruby on Rails', 'Java'],
@@ -119,9 +146,18 @@ const projects = [
   },
   {
     title: 'Cat Curling',
-    video: 'catcurling.webm',
-    description: `...ist ein Browser-Spiel, bei dem man in einem Wohnzimmer mit Katzen Curling spielt! 
-    Der Spieler hat nur eine bestimmte Anzahl von Schüssen, um die Katze ins Ziel zu bringen und die bestmögliche Punktzahl zu erreichen. 
+    videos: [
+      {
+        fileName: 'catcurling.webm',
+        type: 'video/webm',
+      },
+      {
+        fileName: 'catcurling.mov',
+        type: 'video/mp4; codecs="hvc1"',
+      },
+    ],
+    description: `...ist ein Browser-Spiel, bei dem man in einem Wohnzimmer mit Katzen Curling spielt!
+    Der Spieler hat nur eine bestimmte Anzahl von Schüssen, um die Katze ins Ziel zu bringen und die bestmögliche Punktzahl zu erreichen.
     Das Spiel besteht aus fünf Levels mit steigendem Schwierigkeitsgrad.
    `,
     technologies: ['JavaScript', 'Phaser.js', 'Firebase'],
@@ -161,7 +197,7 @@ const projects = [
         :imagePosition="(index + 1) % 2 === 0 ? 'left' : 'right'"
         :people="project.people"
         :links="project.links"
-        :video="project.video"
+        :videos="project.videos"
         :isPhone="project.isPhone"
       />
     </div>

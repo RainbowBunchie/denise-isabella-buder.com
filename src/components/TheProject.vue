@@ -9,7 +9,7 @@ interface Props {
   technologies?: string[];
   people: { name: string; link?: string }[];
   links?: { text: string; url?: string }[];
-  video: string;
+  videos: { fileName: string; type: string }[];
   isPhone: boolean;
 }
 
@@ -17,8 +17,16 @@ const props = defineProps<Props>();
 const flexDirection = computed(() =>
   props.imagePosition == 'right' ? 'row-reverse' : 'row'
 );
-const videoUrl = computed(() =>
-  new URL(`../assets/videos/${props.video}`, import.meta.url).toString()
+const videos = computed(() =>
+  props.videos.map((video) => {
+    return {
+      ...video,
+      fileName: new URL(
+        `../assets/videos/${video.fileName}`,
+        import.meta.url
+      ).toString(),
+    };
+  })
 );
 const videoClass = computed(() =>
   props.isPhone == true ? 'project--phone' : 'project--tablet'
@@ -29,8 +37,12 @@ const videoClass = computed(() =>
   <div class="project" :class="videoClass">
     <div class="project__video video" :class="videoClass">
       <video autoplay loop muted playsinline>
-        <source :src="videoUrl" type="video/webm" />
-        Dein Browser unterstützt keine Videos.
+        <source
+          :key="video.fileName"
+          v-for="video in videos"
+          :src="video.fileName"
+          :type="video.type"
+        />
       </video>
     </div>
     <div class="project__info info">
