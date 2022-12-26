@@ -118,7 +118,7 @@ const uniqueId = computed(
     overflow: hidden;
     opacity: 0.2;
     // closing
-    transition: max-height 1.5s cubic-bezier(0, 1, 0, 1),
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1),
       padding 0.5s ease-in-out, opacity 0.5s ease-in-out;
     @media only screen and (min-width: $breakpoint--tablet) {
       margin-left: 68px;
@@ -137,7 +137,7 @@ const uniqueId = computed(
     opacity: 1;
     max-height: 100vh;
     // opening
-    transition: max-height 1.5s ease-in-out, padding 0.5s ease-in-out,
+    transition: max-height 0.4s ease-in, padding 0.4s ease-in-out,
       opacity 0.5s ease-in-out;
     padding: 1rem 2rem 1rem 20px;
   }
