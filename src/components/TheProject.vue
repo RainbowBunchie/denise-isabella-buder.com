@@ -82,15 +82,13 @@ const videoClass = computed(() =>
 .project {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   margin-top: 8rem;
   width: 100%;
 
-  @media only screen and (min-width: $breakpoint--tablet) {
-    gap: 4rem;
-  }
   @media only screen and (min-width: $breakpoint--desktop) {
     margin-top: 7rem;
+    gap: 4rem;
     flex-direction: v-bind(flexDirection);
   }
 
@@ -130,13 +128,13 @@ const videoClass = computed(() =>
       }
 
       @media only screen and (min-width: $breakpoint--desktop) {
-        width: 430px;
-        height: 430px;
+        width: 350px;
+        height: 350px;
       }
 
       @media only screen and (min-width: $breakpoint--large-desktop) {
-        width: 470px;
-        height: 470px;
+        width: 480px;
+        height: 480px;
       }
     }
     .img__image {
@@ -153,7 +151,7 @@ const videoClass = computed(() =>
 
   &--phone {
     @media only screen and (min-width: $breakpoint--tablet) {
-      gap: 5rem;
+      gap: 2rem;
     }
 
     @media only screen and (min-width: $breakpoint--desktop) {
@@ -164,9 +162,9 @@ const videoClass = computed(() =>
       gap: 5rem;
     }
     .video {
-      width: 50vw;
+      width: 70vw;
       @media only screen and (min-width: $breakpoint--tablet) {
-        width: 30vw;
+        width: 40vw;
       }
       @media only screen and (min-width: $breakpoint--desktop) {
         width: 25%;
@@ -175,20 +173,24 @@ const videoClass = computed(() =>
 
     video {
       min-width: 70%;
+
+      @media only screen and (min-width: $breakpoint--desktop) {
+        min-width: 120%;
+      }
     }
   }
   &--tablet {
     video {
-      min-width: 80vw;
+      min-width: 100vw;
       @media only screen and (min-width: $breakpoint--tablet) {
-        min-width: 150%;
+        min-width: 75vw;
       }
       @media only screen and (min-width: $breakpoint--desktop) {
-        min-width: 110%;
+        min-width: 130%;
       }
 
       @media only screen and (min-width: $breakpoint--large-desktop) {
-        min-width: 150%;
+        min-width: 160%;
       }
     }
   }

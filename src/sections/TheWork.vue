@@ -127,7 +127,7 @@ const projects = [
     Diese haben nun die Möglichkeit, diese Aufgaben einzusehen und sich für sie zu bewerben.
     Nach der Bewerbung wählt der Administrator einen der Freiwilligen aus und weist die Aufgabe zu.
    `,
-    technologies: ['Web', 'Android App', 'Ruby on Rails', 'Java'],
+    technologies: ['Ruby on Rails', 'Java'],
     links: [
       // {
       //   text: 'zum Code',
