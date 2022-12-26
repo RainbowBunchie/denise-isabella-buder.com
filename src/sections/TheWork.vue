@@ -33,12 +33,12 @@ const projects = [
     title: 'Turtlet',
     videos: [
       {
-        fileName: 'turtlet.webm',
-        type: 'video/webm',
-      },
-      {
         fileName: 'turtlet.mov',
         type: 'video/mp4; codecs="hvc1"',
+      },
+      {
+        fileName: 'turtlet.webm',
+        type: 'video/webm',
       },
     ],
     description: `... ist ein entschleunigender Messaging-Dienst für Web und Smartphones, der dem schnelllebigen Zeitgeist unserer digitalen Gesellschaft entgegenwirkt,
@@ -79,12 +79,12 @@ const projects = [
     title: 'SOUL COLLECTORS',
     videos: [
       {
-        fileName: 'soulcollectors.webm',
-        type: 'video/webm',
-      },
-      {
         fileName: 'soulcollectors.mov',
         type: 'video/mp4; codecs="hvc1"',
+      },
+      {
+        fileName: 'soulcollectors.webm',
+        type: 'video/webm',
       },
     ],
     description: `...ist ein lokales FFA-Browser-Multiplayer-Spiel, in welchem das eigene Smartphone als Gamepad genutzt wird.
@@ -114,12 +114,12 @@ const projects = [
     title: 'Help(u)help',
     videos: [
       {
-        fileName: 'helpuhelp.webm',
-        type: 'video/webm',
-      },
-      {
         fileName: 'helpuhelp.mov',
         type: 'video/mp4; codecs="hvc1"',
+      },
+      {
+        fileName: 'helpuhelp.webm',
+        type: 'video/webm',
       },
     ],
     description: `...ist ein Tool, welches Sozialarbeitern dabei hilft, verschiedene Aufgaben für Freiwillige zu organisieren.
@@ -148,12 +148,12 @@ const projects = [
     title: 'Cat Curling',
     videos: [
       {
-        fileName: 'catcurling.webm',
-        type: 'video/webm',
-      },
-      {
         fileName: 'catcurling.mov',
         type: 'video/mp4; codecs="hvc1"',
+      },
+      {
+        fileName: 'catcurling.webm',
+        type: 'video/webm',
       },
     ],
     description: `...ist ein Browser-Spiel, bei dem man in einem Wohnzimmer mit Katzen Curling spielt!

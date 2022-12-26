@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 import TheHashtag from './TheHashtag.vue';
 
 interface Props {
@@ -28,13 +28,78 @@ const videos = computed(() =>
     };
   })
 );
+
+const projectClass = computed(
+  () =>
+    `project--${props.title
+      .toLowerCase()
+      .replace(' ', '')
+      .replace('(', '')
+      .replace(')', '')}`
+);
 const videoClass = computed(() =>
   props.isPhone == true ? 'project--phone' : 'project--tablet'
 );
+
+const pauseTime = 5000; // ms
+const animationTime = 2; // seconds
+let nextPause = 2; // seconds
+
+function isInViewport(element) {
+  // console.log(element);
+  const rect = element.getBoundingClientRect();
+  // console.log(rect);
+  return (
+    rect.top >= -rect.height &&
+    rect.bottom <=
+      (window.innerHeight + rect.height ||
+        document.documentElement.clientHeight + rect.height)
+  );
+}
+let isPausedDueToViewport = false;
+onMounted(() => {
+  const video = document.querySelector(
+    `.${projectClass.value} video`
+  ) as HTMLVideoElement;
+
+  function animate() {
+    const inViewport = isInViewport(video);
+
+    if (!inViewport && video.played && video.currentTime > 0) {
+      video.pause();
+      isPausedDueToViewport = true;
+    } else if (inViewport && isPausedDueToViewport) {
+      video.play();
+      isPausedDueToViewport = false;
+    }
+
+    if (video.played && video.currentTime >= nextPause) {
+      video.pause();
+      nextPause += animationTime;
+
+      setTimeout(() => {
+        if (nextPause > video.duration) {
+          nextPause = 2;
+          video.currentTime = 0;
+        }
+
+        video.play();
+      }, pauseTime);
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  if (video) {
+    video.play();
+
+    animate();
+  }
+});
 </script>
 
 <template>
-  <div class="project" :class="videoClass">
+  <div class="project" :class="[videoClass, projectClass]">
     <div class="project__video video" :class="videoClass">
       <video autoplay loop muted playsinline>
         <source
