@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,900;1,900&display=swap');
+
+$color--primary: #d9d9d9;
+$color--secondary: #2a2726;
+$color--accent: rgb(188, 19, 48);
+// #a60000;
+$color--text: $color--primary;
+
+$font--text: 'Source Sans Pro', sans-serif;
+$font--heading: $font--text;
+
+$breakpoint--mobile: 480px;
+$breakpoint--tablet: 768px;
+$breakpoint--desktop: 1024px;
+$breakpoint--large-desktop: 1300px;
+$breakpoint--xlarge-desktop: 1550px;
+
+$svg--arrow: url("data:image/svg+xml,%3Csvg width='24' height='15' viewBox='0 0 24 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 13L12 3L2 13' stroke='%23D9D9D9' stroke-width='4'/%3E%3C/svg%3E%0A");
