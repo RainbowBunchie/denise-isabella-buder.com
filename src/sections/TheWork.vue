@@ -41,7 +41,7 @@ const projects = [
         type: 'video/webm',
       },
     ],
-    description: `... ist ein entschleunigender Messaging-Dienst für Web und Smartphones, der dem schnelllebigen Zeitgeist unserer digitalen Gesellschaft entgegenwirkt,
+    description: `...ist ein entschleunigender Messaging-Dienst für Web und Smartphones, der dem schnelllebigen Zeitgeist unserer digitalen Gesellschaft entgegenwirkt,
     indem die gesendeten Nachrichten (so genannten "Turtlets") mehr emotionalen Wert und Individualität verliehen wird.
     Ähnlich wie bei einem Brief oder einer Postkarte können Turtlets jeweils nur an eine Person gesendet werden und
     benötigen eine gewisse Zeit, um den Empfänger zu erreichen. Ich habe mich mit der Umsetzung des Frontends mit speziellem Fokus auf Authentifizierung und State-Magement beschäftigt.`,
