@@ -35,6 +35,12 @@ onMounted(() => {
 });
 const work = [
   {
+    title: 'Software-Entwicklerin',
+    subtitle: '@Vivid Planet Software',
+    labelInfo: '2023-heute',
+    content: '<b>Fullstack-Software-Entwicklung im Bereich Web und App</b>',
+  },
+  {
     title: 'Web-Entwicklerin',
     subtitle: '@Nolimits Digital Business GmbH',
     labelInfo: '2021-heute',
