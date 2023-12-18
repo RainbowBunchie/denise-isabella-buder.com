@@ -36,7 +36,7 @@ const paddingClass = computed(() => (props.padded ? 'footer--padded' : ''));
       >
       <RouterLink class="links__link link" to="/imprint">Impressum</RouterLink>
     </div>
-    <div class="footer__copyright">© 2022 Denise Buder</div>
+    <div class="footer__copyright">© 2023 Denise Buder</div>
   </nav>
 </template>
 <style scoped lang="scss">
