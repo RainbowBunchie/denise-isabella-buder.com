@@ -20,9 +20,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "gsap": "^3.10.4",
+    "typed.js": "^2.1.0",
     "vue": "^3.2.37",
-    "vue-router": "^4.1.2",
-    "vue3-typed.js": "^1.0.0-pre"
+    "vue-router": "^4.1.2"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",

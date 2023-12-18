@@ -1,13 +1,7 @@
 <script setup lang="ts">
 import TheCharacter from '@/components/TheCharacter.vue';
-import { defineComponent, onMounted, onUnmounted } from 'vue';
-import { VueTyped } from 'vue3-typed.js';
-
-defineComponent({
-  components: {
-    VueTyped,
-  },
-});
+import { onMounted } from 'vue';
+import Typed from 'typed.js';
 
 class Cursor {
   cursor?: HTMLSpanElement = undefined;
@@ -51,6 +45,8 @@ class Cursor {
   // add still cursor
 }
 
+let typed: Typed | '' = '';
+
 onMounted(() => {
   const cursor = new Cursor({ cursorClass: 'cursor' });
   window.addEventListener('mousemove', (e: MouseEvent) => {
@@ -68,6 +64,16 @@ onMounted(() => {
   window.addEventListener('scroll', function (e) {
     cursor.hideCursor();
   });
+
+  typed = new Typed('#element', {
+    strings: ['Denise.', 'Web-Entwicklerin.', 'Web-Designerin.'],
+    startDelay: 1000,
+    backSpeed: 60,
+    backDelay: 2500,
+    typeSpeed: 60,
+    loop: true,
+    smartBackspace: true,
+  });
 });
 </script>
 
@@ -78,7 +84,7 @@ onMounted(() => {
     <h1 class="header__headline headline">
       Hi, ich bin&#160;
       <span class="headline__accent">
-        <vue-typed
+        <!-- <vue-typed
           :startDelay="1000"
           :typeSpeed="50"
           :backSpeed="50"
@@ -87,7 +93,8 @@ onMounted(() => {
           smartBackspace
           :strings="['Denise.', 'Web-Entwicklerin.', 'Web-Designerin.']"
         >
-        </vue-typed>
+        </vue-typed> -->
+        <span id="element" class="typed">{{ typed }}</span>
       </span>
     </h1>
   </section>
